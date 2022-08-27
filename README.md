@@ -5,7 +5,6 @@
 - 🌱 I’m currently learning Python
 - 📫 How to reach me: alinem_oliveira@yahoo.com
 - ⚡ Random fact: I like to read detective novels and to play musical instruments
--->
 
 
 <h3 align="left">Connect with me:</h3>
