@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Aline</h1>
 
 
-- 🔭 I’m currently working at Capgemini Brasil as a full stack developer (Node.js and Angular)
+- 🔭 I’m currently working at Capgemini as a full stack developer (Node.js and Angular)
 - 🌱 I’m currently learning Python
 - 📫 How to reach me: alinem_oliveira@yahoo.com
 - ⚡ Random fact: I like to read detective novels and to play musical instruments
