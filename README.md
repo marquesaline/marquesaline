@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Aline</h1>
 
 
-- 🔭 I’m currently working as a Full Stack developer (Node.js and Angular)
+- 🔭 I’m currently working as a Full Stack developer (Ruby and Vue.js)
 - 🌱 I’m currently learning Python
 - 📫 How to reach me: alinem_oliveira@yahoo.com
 - ⚡ Random fact: I like to read detective novels and to play musical instruments
