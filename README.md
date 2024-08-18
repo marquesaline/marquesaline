@@ -1,6 +1,5 @@
 # Hi 👋, I'm Aline!</h1>
 
----
 Technology excites me, and I thrive on continuous learning and improvement in all areas of my job.
 
 I’m currently working as a Full Stack Developer.
