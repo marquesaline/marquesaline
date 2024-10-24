@@ -2,7 +2,7 @@
 
 Technology excites me, and I thrive on continuous learning and improvement in all areas of my job.
 
-I’m currently working as a Full Stack Developer.
+I’m currently working as a Full Stack Developer and Programming Instructor.
 
 ---
 ## 🔭 Skills 
