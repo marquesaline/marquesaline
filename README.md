@@ -9,8 +9,8 @@ I’m currently working as a Full Stack Developer and Programming Instructor.
 
 * Ruby
 * Vue.js
-* TypeScript
 * Node.js
+* TypeScript
 * Python with Django
 * Google Cloud Platform
 
