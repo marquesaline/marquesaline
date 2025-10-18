@@ -1,29 +1,36 @@
-# Hi 👋, I'm Aline!</h1>
+# Hi 👋, I'm Aline
 
-Technology excites me, and I thrive on continuous learning and improvement in all areas of my job.
-
-I’m currently working as a Full Stack Developer and Programming Instructor.
+I’m a Full Stack Developer working with **Ruby on Rails**, using **Hotwire** and **Turbo** to build fast and modern web applications.  
+I also teach programming, helping new developers understand core concepts and build confidence through practice.
 
 ---
-## 🔭 Skills 
 
-* Ruby
-* Vue.js
-* Node.js
-* TypeScript
-* Python with Django
-* Google Cloud Platform
+## ⚙️ Tech Stack
 
-## 🌱 I’m currently improving:
+**Backend:** Ruby on Rails, Python (Django)  
+**Frontend:** Hotwire, Turbo, React, TypeScript  
+**Cloud & Tools:** AWS, Google Cloud Platform, Docker, PostgreSQL
 
-* Nuxt.js
-* Ruby on Rails
+---
 
-### Connect
+## 📚 Currently focused on
+
+- Advanced concepts in **Rails + Hotwire**  
+- Modern front-end patterns with **Nuxt.js**  
+
+---
+
+## 👩‍🏫 Teaching
+
+As a programming instructor, I teach Python, HTML, CSS, and JavaScript — focusing on logic, problem-solving, and clarity of thought before syntax.
+
+---
+
+## 🔗 Connect
+
 <a href="https://www.linkedin.com/in/marques-aline/" target="_blank">
-    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />
+  <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 <a target='_blank' href="mailto:alinem_oliveira@yahoo.com">
-    <img src="https://img.shields.io/badge/email-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white">
+  <img src="https://img.shields.io/badge/email-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white">
 </a>
-  
