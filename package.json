@@ -1,0 +1,25 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marquesaline/marquesaline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/marquesaline/marquesaline/issues"
+  },
+  "homepage": "https://github.com/marquesaline/marquesaline#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0-alpha.37",
+    "@tailwindcss/postcss": "^4.0.0-alpha.37"
+  }
+}

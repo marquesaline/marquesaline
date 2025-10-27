@@ -1,0 +1,50 @@
+# Site settings
+title: Aline Marques - Dev Notes
+email: alinemarques.dev@gmail.com
+description: >-
+  Anotações de estudo e desenvolvimento
+baseurl: ""
+url: "https://marquesaline.github.io"
+
+# Social links
+instagram_username: maarques_aline
+github_username: marquesaline
+linkedin_username: marques-aline
+
+# Build settings
+markdown: kramdown
+theme: minima
+minima:
+  skin: auto
+  date_format: "%d/%m/%Y"
+  
+permalink: /:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+lang: pt-BR
+
+author: Aline Marques  
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - Dockerfile
+  - docker-compose.yml
+  - entrypoint.sh
+  - README.md

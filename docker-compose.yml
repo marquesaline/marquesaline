@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jekyll:
+    build: .
+    container_name: jekyll-dev
+    ports:
+      - "4001:4000"
+      - "35729:35729"
+    volumes:
+      - .:/site
+    stdin_open: true
+    tty: true
