@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }}</title>
+
+    {% seo %}
+
+    <link rel="stylesheet" href="/assets/css/output.css" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="w-full bg-bg-secundary py-3">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <h1 class="text-3xl text-text-secundary ">
+          <a href="{{ "/" | relative_url }}" class="">
+            Dev Notes - Aline Marques
+          </a>
+        </h1>
+
+        <nav>
+          <ul class="flex gap-4 mt-2">
+            <li>
+              <a href="{{ "/about" | relative_url }}" class="text-text-secundary">Sobre</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>   
+
+    <main class="max-w-3xl mx-auto flex-grow py-8 bg-bg-primary">
+      {{ content }}
+    </main>
+
+    <footer class="w-full bg-bg-secundary py-3">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <p class="text-text-secundary">© {{ "now" | date: "%Y" }} Dev Notes - Aline Marques. Todos os direitos reservados.</p>
+        <nav>
+          <ul class="flex items-center gap-4">
+            <li>
+              <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/icons/github.svg' | relative_url }}" alt="GitHub" class="w-6 6 inline-block" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/icons/linkedin.svg' | relative_url }}" alt="LinkedIn" class="w-6 6 inline-block" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/icons/instagram.svg' | relative_url }}" alt="Instagram" class="w-6 6 inline-block" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>

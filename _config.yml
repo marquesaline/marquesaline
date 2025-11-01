@@ -1,5 +1,5 @@
 # Site settings
-title: Aline Marques - Dev Notes
+title: Dev Notes - Aline Marques 
 email: alinemarques.dev@gmail.com
 description: >-
   Anotações de estudo e desenvolvimento
@@ -13,7 +13,7 @@ linkedin_username: marques-aline
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 minima:
   skin: auto
   date_format: "%d/%m/%Y"

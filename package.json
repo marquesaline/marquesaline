@@ -13,13 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/marquesaline/marquesaline/issues"
   },
   "homepage": "https://github.com/marquesaline/marquesaline#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.0-alpha.37",
-    "@tailwindcss/postcss": "^4.0.0-alpha.37"
+    "tailwindcss": "^3.4.15"
   }
 }
