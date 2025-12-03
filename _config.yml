@@ -27,7 +27,13 @@ plugins:
 
 lang: pt-BR
 
-author: Aline Marques  
+author: Aline Marques
+
+social:
+  name: Aline Marques
+  links: 
+    - https://www.linkedin.com/in/marques-aline/
+    - https://github.com/marquesaline
 
 # Exclude from processing
 exclude:
