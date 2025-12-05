@@ -71,7 +71,7 @@ Além desses, você vai encontrar arquivos como `.gitignore` (define o que não 
 
 Agora que os arquivos principais do projeto já ficaram claros, é hora de olhar para a pasta onde a maior parte do trabalho realmente acontece: o diretório `app/`.
 
-## `app`
+## `app/`
 
 É o diretório mais importante de uma aplicação em Rails. É nesta pasta que você provavelmente mais vai mexer, pois é o local onde está a lógica central da aplicação. 
 
