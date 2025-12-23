@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Entendendo os arquivos principais e a pasta `app/` no Rails"
+title:  "Entendendo os arquivos principais e a pasta app/ no Rails"
 description: "Uma explicação simples e prática dos principais arquivos e do diretório app/ em um projeto Rails."
 permalink: "/rails-arquivos-e-app"
 date: 2025-12-03
@@ -13,7 +13,7 @@ Essas pastas e arquivos seguem uma estrutura padrão pensada para organizar a ap
 
 Então hoje quero te ajudar a entender melhor cada um dos diretórios, ou pelo menos os principais.
 
-![Diretórios de um projeto em Rails](assets/images/diretorios_rails.png)
+![Diretórios de um projeto em Rails](assets/images/diretorios_rails.webp)
 
 Olhando assim, dá para ver "de cara" que são muitas pastas e arquivos. Mas não se assuste, a gente vai entender melhor. E também não tente decorar tudo isso, prometo que a medida que você for usando o framework, vai ficando mais fácil saber onde encontrar cada coisa. 
 
