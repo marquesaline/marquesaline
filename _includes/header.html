@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}" class="title">
+        <img src="{{ site.logo }}" alt="{{ site.title }}"  class="logo"/>
+        {{ site.title | escape }}
+      </a>
+      
+      <div class="nav-links">
+        <a href="{{ '/about' | relative_url }}">About</a>
+      </div>
+    </nav>
+  </div>
+</header>

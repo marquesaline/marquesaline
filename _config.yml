@@ -1,11 +1,14 @@
 # Site settings
-title: Aline Marques - Dev Notes
+title: Aline Marques
 email: alinemarques.dev@gmail.com
 description: >-
   Anotações de estudo e desenvolvimento
 baseurl: ""
 url: "https://alinemarques.dev"
-
+lang: pt_BR
+encoding: utf-8
+timezone: America/Sao_Paulo
+logo: '/assets/images/logo.svg'
 # Social links
 instagram_username: maarques_aline
 github_username: marquesaline
@@ -13,10 +16,6 @@ linkedin_username: marques-aline
 
 # Build settings
 markdown: kramdown
-theme: minima
-minima:
-  skin: auto
-  date_format: "%d/%m/%Y"
   
 permalink: /:title/
 

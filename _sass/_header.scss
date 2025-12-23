@@ -1,0 +1,45 @@
+.header {
+  background-color: $bg-primary;
+  padding: $spacing-lg;
+
+  @include mobile {
+    padding: $spacing-sm;
+  }
+  
+  .container {
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $text-dark;
+
+      a {
+        text-decoration: none;
+        color: $text-dark;
+        font-family: $font-title;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        color: $text-dark;
+        font-size: $font-size-title;
+
+        @include mobile {
+          font-size: $font-size-subtitle;
+        }
+
+        .logo {
+          width: 60px;
+          height: 60px;
+
+          @include mobile {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      
+      }
+    }
+  }
+}

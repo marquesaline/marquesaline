@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/css/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/css/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/css/fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-base;
+  color: $text-dark;
+  line-height: 1.6;
+  background-color: $bg-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  color: $text-dark;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $font-size-title;
+}
+
+h2 {
+  font-size: $font-size-subtitle;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: darken($primary, 10%);
+    text-decoration: underline;
+  }
+}
+
+code {
+  font-family: $font-code;
+  background-color: $bg-gray;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: $text-dark;
+}
+
+pre {
+  background-color: $bg-gray;
+  padding: $spacing-sm;
+  border-radius: 5px;
+  overflow-x: auto;
+  
+  code {
+    background: none;
+    padding: 0;
+  }
+}
