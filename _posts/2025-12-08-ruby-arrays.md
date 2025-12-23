@@ -5,7 +5,6 @@ description: "Entenda o que são arrays em Ruby, por que eles são necessários 
 permalink: "/ruby-arrays"
 date: 2025-12-08
 categories: Ruby
-published: false
 ---
 
 Em muitos casos no dia a dia da programação precisamos trabalhar com vários valores ao mesmo tempo. Pra armazenar esses valores, nem sempre é possível (ou eficiente) criar muitas variáveis. 
