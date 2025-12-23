@@ -1,8 +1,8 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a href="{{ '/' | relative_url }}" class="title">
-        <img src="{{ site.logo }}" alt="{{ site.title }}"  class="logo"/>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" class="title" aria-label="Home - {{ site.title }}">
+        <img src="{{ site.logo }}" alt="{{ site.title }} logo" class="logo"/>
         {{ site.title | escape }}
       </a>
       
