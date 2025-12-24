@@ -4,7 +4,7 @@ title: "Arrays em Ruby"
 description: "Entenda o que são arrays em Ruby, por que eles são necessários e como usá-los no dia a dia da programação."
 permalink: "/ruby-arrays"
 date: 2025-12-08
-categories: Ruby
+categories: [Ruby]
 ---
 
 Em muitos casos no dia a dia da programação precisamos trabalhar com vários valores ao mesmo tempo. Pra armazenar esses valores, nem sempre é possível (ou eficiente) criar muitas variáveis. 

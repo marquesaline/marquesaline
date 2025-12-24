@@ -4,7 +4,7 @@ title:  "Entendendo os arquivos principais e a pasta app/ no Rails"
 description: "Uma explicação simples e prática dos principais arquivos e do diretório app/ em um projeto Rails."
 permalink: "/rails-arquivos-e-app"
 date: 2025-12-03
-categories: Ruby on Rails
+categories: [Rails]
 ---
 
 Se você já criou um projeto em Rails sabe que o framework traz uma série de arquivos e diretórios que são essenciais para o funcionamento da aplicação. 

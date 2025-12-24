@@ -1,0 +1,17 @@
+{%- if paginator.total_pages > 1 -%}
+  <nav class="pagination" aria-label="Paginação">
+    {%- if paginator.previous_page -%}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">← Anterior</a>
+    {%- else -%}
+      <span class="pagination-link disabled">← Anterior</span>
+    {%- endif -%}
+    
+    <span class="pagination-info">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+    
+    {%- if paginator.next_page -%}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Próxima →</a>
+    {%- else -%}
+      <span class="pagination-link disabled">Próxima →</span>
+    {%- endif -%}
+  </nav>
+{%- endif -%}

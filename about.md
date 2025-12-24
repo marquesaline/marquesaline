@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About
-permalink: /about/
+title: Sobre
+permalink: /sobre/
 ---
 
 Oi, eu sou a Aline.

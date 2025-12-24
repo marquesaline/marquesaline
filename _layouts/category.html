@@ -1,7 +1,5 @@
 ---
 layout: default
-pagination:
-  enabled: true
 ---
 
 <div class="blog">
@@ -11,6 +9,5 @@ pagination:
 
   {% include search_bar.html %}
   {% include categories.html %}
-  {% include post_list.html posts=site.posts %}
-  {% include pagination.html %}
+  {% include post_list.html posts=page.posts %}
 </div>

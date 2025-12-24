@@ -1,0 +1,32 @@
+<div class="posts-list">
+  {%- if include.posts.size > 0 -%}
+    {%- for post in include.posts -%}
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        
+        {%- if post.excerpt -%}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {%- endif -%}
+        
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%d/%m/%Y" }}
+          </time>
+          
+          {%- if post.categories.size > 0 -%}
+            <span class="separator">•</span>
+            <div class="post-categories">
+              {%- for category in post.categories -%}
+                <span class="category-badge">{{ category }}</span>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </article>
+    {%- endfor -%}
+  {%- else -%}
+    <p class="no-posts">Nenhum post publicado ainda.</p>
+  {%- endif -%}
+</div>

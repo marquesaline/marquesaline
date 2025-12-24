@@ -1,6 +1,6 @@
 .header {
   background-color: $bg-primary;
-  padding: $spacing-lg;
+  padding: 1rem $spacing-lg;
 
   @include mobile {
     padding: $spacing-sm;
@@ -54,6 +54,7 @@
     .copy {
       color: $text-dark;
       font-size: $font-size-base;
+      font-family: $font-body;
     }
 
     .social-links {

@@ -23,8 +23,24 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-archives
 
-lang: pt-BR
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - página :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category
+  permalinks:
+    category: '/:name/'
 
 author: Aline Marques
 
