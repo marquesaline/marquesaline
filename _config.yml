@@ -1,11 +1,14 @@
 # Site settings
-title: Aline Marques - Dev Notes
+title: Aline Marques
 email: alinemarques.dev@gmail.com
 description: >-
-  Anotações de estudo e desenvolvimento
+  Anotações sobre Ruby, Rails e desenvolvimento web
 baseurl: ""
 url: "https://alinemarques.dev"
-
+lang: pt_BR
+encoding: utf-8
+timezone: America/Sao_Paulo
+logo: '/assets/images/logo.svg'
 # Social links
 instagram_username: maarques_aline
 github_username: marquesaline
@@ -13,10 +16,6 @@ linkedin_username: marques-aline
 
 # Build settings
 markdown: kramdown
-theme: minima
-minima:
-  skin: auto
-  date_format: "%d/%m/%Y"
   
 permalink: /:title/
 
@@ -24,8 +23,24 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-archives
 
-lang: pt-BR
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - página :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category
+  permalinks:
+    category: '/:name/'
 
 author: Aline Marques
 

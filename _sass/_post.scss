@@ -1,0 +1,233 @@
+.post {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  
+  @include mobile {
+    padding: $spacing-md;
+  }
+}
+
+// Post Header
+.post-header {
+  margin-bottom: $spacing-xl;
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid lighten($text-gray, 20%);
+}
+
+.post-title {
+  font-family: $font-title;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+  color: $text-dark;
+  
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+.post-description {
+  font-size: 1.2rem;
+  color: $text-dark;
+  line-height: 1.6;
+  margin-top: $spacing-md;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: $text-gray;
+  
+  time {
+    font-weight: 500;
+  }
+  
+  .separator {
+    color: lighten($text-gray, 10%);
+  }
+  
+  .post-categories {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: lighten($primary, 35%);
+    color: $primary;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: lighten($primary, 30%);
+      transform: scale(1.05);
+      text-decoration: none;
+    }
+  }
+}
+
+// Post Content
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: $text-dark;
+  
+  h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-md;
+    color: $text-dark;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid lighten($primary, 30%);
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    margin-bottom: $spacing-sm;
+  }
+  
+  ul, ol {
+    margin-bottom: $spacing-md;
+    margin-left: $spacing-lg;
+    
+    li {
+      margin-bottom: $spacing-xs;
+    }
+  }
+  
+  a {
+    color: $primary;
+    text-decoration: underline;
+    
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+  
+  blockquote {
+    margin: $spacing-md 0;
+    padding: $spacing-sm $spacing-md;
+    border-left: 4px solid $primary;
+    background-color: lighten($primary, 40%);
+    font-style: italic;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  // Code blocks
+  code {
+    font-family: $font-code;
+    font-size: 0.9em;
+    background-color: $bg-gray;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: $text-dark;
+  }
+  
+  pre {
+    background-color: #f6f8fa;
+    padding: $spacing-md;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: $spacing-md;
+    border: 1px solid lighten($text-gray, 20%);
+    
+    code {
+      background: none;
+      padding: 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: $spacing-md 0;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid lighten($text-gray, 20%);
+    margin: $spacing-lg 0;
+  }
+}
+
+// Post Footer
+.post-footer {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid lighten($text-gray, 20%);
+}
+
+.post-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-md;
+    background-color: $bg-gray;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: lighten($primary, 35%);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+    
+    .nav-label {
+      font-size: 0.85rem;
+      color: $text-gray;
+      margin-bottom: $spacing-xs;
+    }
+    
+    .nav-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $text-dark;
+    }
+  }
+  
+  .nav-prev {
+    text-align: left;
+  }
+  
+  .nav-next {
+    text-align: right;
+    grid-column: 2;
+    
+    @include mobile {
+      grid-column: 1;
+    }
+  }
+}

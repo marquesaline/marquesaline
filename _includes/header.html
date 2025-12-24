@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" class="title" aria-label="Home - {{ site.title }}">
+        <img src="{{ site.logo }}" alt="{{ site.title }} logo" class="logo"/>
+        {{ site.title | escape }}
+      </a>
+      
+      <div class="nav-links">
+        <a href="{{ '/sobre' | relative_url }}">Sobre</a>
+      </div>
+    </nav>
+  </div>
+</header>

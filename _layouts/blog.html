@@ -1,0 +1,16 @@
+---
+layout: default
+pagination:
+  enabled: true
+---
+
+<div class="blog">
+  <div class="blog-intro">
+    <h1>{{ site.description }}</h1>
+  </div>
+
+  {% include search_bar.html %}
+  {% include categories.html %}
+  {% include post_list.html posts=site.posts %}
+  {% include pagination.html %}
+</div>

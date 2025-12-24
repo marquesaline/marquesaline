@@ -1,0 +1,14 @@
+<div class="categories">
+  <a href="{{ '/' | relative_url }}" class="category {% if page.layout != 'category' %}active{% endif %}">
+    Todos
+  </a>
+  
+  {%- assign all_categories = site.categories | sort -%}
+  
+  {%- for category in all_categories -%}
+    <a href="{{ site.baseurl }}/{{ category[0] | slugify }}/" 
+       class="category {% if page.layout == 'category' and page.title == category[0] %}active{% endif %}">
+      {{ category[0] }}
+    </a>
+  {%- endfor -%}
+</div>

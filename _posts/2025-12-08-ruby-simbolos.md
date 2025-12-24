@@ -4,7 +4,7 @@ title:  "Símbolos em Ruby (Symbols)"
 description: "Descubra o que são variáveis e constantes em Ruby e entenda de forma simples quando usar cada uma"
 permalink: "/simbolos-ruby"
 date: 2025-12-08
-categories: Ruby
+categories: [Ruby]
 published: false
 ---
 

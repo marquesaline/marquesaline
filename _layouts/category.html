@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="blog">
+  <div class="blog-intro">
+    <p>{{ site.description }}</p>
+  </div>
+
+  {% include search_bar.html %}
+  {% include categories.html %}
+  {% include post_list.html posts=page.posts %}
+</div>
