@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%d" }} de {% include date_pt.html date=page.date %} de {{ page.date | date: "%Y" }}
+      </time>
+      
+      {%- if page.categories.size > 0 -%}
+        <span class="separator">•</span>
+        <div class="post-categories">
+          {%- for category in page.categories -%}
+            <a href="{{ site.baseurl }}/categoria/{{ category | slugify }}/" class="category-badge">
+              {{ category }}
+            </a>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+    
+    {%- if page.description -%}
+      <p class="post-description">{{ page.description }}</p>
+    {%- endif -%}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <nav class="post-navigation">
+      {%- if page.previous.url -%}
+        <a href="{{ page.previous.url | relative_url }}" class="nav-link nav-prev">
+          <span class="nav-label">← Post Anterior</span>
+          <span class="nav-title">{{ page.previous.title }}</span>
+        </a>
+      {%- endif -%}
+      
+      {%- if page.next.url -%}
+        <a href="{{ page.next.url | relative_url }}" class="nav-link nav-next">
+          <span class="nav-label">Próximo Post →</span>
+          <span class="nav-title">{{ page.next.title }}</span>
+        </a>
+      {%- endif -%}
+    </nav>
+  </footer>
+</article>

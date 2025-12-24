@@ -1,0 +1,50 @@
+.static-page {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: $spacing-xl;
+  border-radius: 8px;
+  
+  @include mobile {
+    padding: $spacing-md;
+  }
+}
+
+// Static Page Header
+.static-page-header {
+  margin-bottom: $spacing-xl;
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid lighten($text-gray, 20%);
+}
+
+.static-page-title {
+  font-family: $font-title;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: $text-dark;
+  text-align: center;
+  
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+// Static Page Content
+.static-page-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: $text-dark;
+  
+  p {
+    margin-bottom: $spacing-md;
+  }
+  
+  a {
+    color: $primary;
+    text-decoration: underline;
+    
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+}

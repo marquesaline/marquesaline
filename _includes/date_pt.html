@@ -1,0 +1,18 @@
+{%- assign day = include.date | date: "%d" -%}
+{%- assign month = include.date | date: "%m" -%}
+{%- assign year = include.date | date: "%Y" -%}
+
+{%- case month -%}
+  {%- when '01' -%}janeiro
+  {%- when '02' -%}fevereiro
+  {%- when '03' -%}março
+  {%- when '04' -%}abril
+  {%- when '05' -%}maio
+  {%- when '06' -%}junho
+  {%- when '07' -%}julho
+  {%- when '08' -%}agosto
+  {%- when '09' -%}setembro
+  {%- when '10' -%}outubro
+  {%- when '11' -%}novembro
+  {%- when '12' -%}dezembro
+{%- endcase -%}
