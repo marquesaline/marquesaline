@@ -128,7 +128,7 @@ input, textarea {
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.4s ease transform 0.4s ease;
+  transition: background-color 0.4s ease, transform 0.4s ease;
   border: none;
   font-size: 1rem;
 
@@ -149,7 +149,7 @@ input, textarea {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: background-color 0.4s ease transform 0.4s ease;
+  transition: background-color 0.4s ease, transform 0.4s ease;
 
   &:hover {
     background-color: darken($primary-light, 10%);
