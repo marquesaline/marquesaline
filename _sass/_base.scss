@@ -56,7 +56,6 @@ body {
 
 main {
   min-height: 100vh;
-  padding: 3rem 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -102,5 +101,82 @@ pre {
   code {
     background: none;
     padding: 0;
+  }
+}
+
+input, textarea {
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  margin-top: 0.3rem;
+  width: 100%;
+  font-family: $font-body;
+
+  &:focus {
+    border-color: $primary;
+    outline: none;
+    box-shadow: 0 0 5px rgba($primary, 0.5);
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $text-white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.4s ease transform 0.4s ease;
+  border: none;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transform: scale(1.01);
+    color: $text-white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.btn-light {
+  background-color: $primary-light;
+  color: $text-dark;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.4s ease transform 0.4s ease;
+
+  &:hover {
+    background-color: darken($primary-light, 10%);
+    transform: scale(1.01);
+    color: $text-dark;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.form-feedback {
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  
+  &.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
   }
 }

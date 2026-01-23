@@ -1,3 +1,139 @@
 ---
 layout: default
 ---
+
+<section class="hero">
+  <div class="section-container">
+    <img src="/assets/images/aline-perfil.jpeg" alt="" class="hero-image" data-i18n-attr="alt:hero.image_alt">
+    <h1 data-i18n="hero.name"></h1>
+    <h2 data-i18n="hero.title"></h2>
+    <p class="hero-description" data-i18n="hero.description"></p>
+
+    <div class="hero-links">
+      <a href="#contact" class="btn-primary" data-i18n="hero.cta_contact"></a>
+      <a href="#" class="btn-light" target="_blank" data-i18n="hero.cta_resume" data-cv-link></a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="section-container">
+    <div class="title">
+      <h2 class="section-title" data-i18n="about.title"></h2>
+      <p class="section-description" data-i18n="about.intro"></p>
+    </div>
+    <div class="content">
+      <div class="journey-container">
+        <h3 data-i18n="about.journey.title"></h3>
+        <p data-i18n-html="about.journey.text"></p>
+      </div>
+      <div class="skills-container">
+        <h3 data-i18n="about.skills_title"></h3>
+        <div id="skills-container" class="skills-grid"></div>
+      </div>
+      <!-- <div id="highlights-container"></div> -->
+    </div>
+  </div>
+</section>
+
+<section class="history">
+  <div class="section-container">
+    <div class="title">
+      <h2 class="section-title" data-i18n="history.title"></h2>
+      <p class="section-description" data-i18n="history.intro"></p>
+    </div>
+    
+    <div id="timeline-container" class="timeline"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-container">
+    <div class="title">
+      <h2 class="section-title" data-i18n="contact.title"></h2>
+      <p class="section-description" data-i18n="contact.subtitle"></p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3 data-i18n="contact.info_title"></h3>
+        
+       <div class="info-item">
+          <div class="info-icon">{% include icons/email.html %}</div>
+          <div>
+            <p class="info-label" data-i18n="contact.email_label"></p>
+            <a href="mailto:alinem_oliveira@yahoo.com" data-i18n="contact.email"></a>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">{% include icons/phone.html %}</div>
+          <div>
+            <p class="info-label" data-i18n="contact.whatsapp_label"></p>
+            <a href="https://wa.me/5581987057304" target="_blank" data-i18n="contact.whatsapp"></a>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">{% include icons/location.html %}</div>
+          <div>
+            <p class="info-label" data-i18n="contact.location_label"></p>
+            <p data-i18n="contact.location"></p>
+          </div>
+        </div>
+        
+        <div class="socials">
+          <h4 data-i18n="contact.socials_title"></h4>
+          <div class="social-links">
+            <a href="{{ site.social.links[1] }}" target="_blank" aria-label="GitHub">
+              {% include icons/github.html %}
+            </a>
+            <a href="{{ site.social.links[0] }}" target="_blank" aria-label="LinkedIn">
+              {% include icons/linkedin.html %}
+            </a>
+            <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" aria-label="Instagram">
+              {% include icons/instagram.html %}
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3 data-i18n="contact.form_title"></h3>
+        <div id="form-feedback" class="form-feedback" style="display: none;"></div>
+
+        <form action="https://formspree.io/f/xwvvanoy" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="contact.form_name_label"></label>
+              <input type="text" name="name" data-i18n-attr="placeholder:contact.form_name_placeholder" required>
+            </div>
+            
+            <div class="form-group">
+              <label data-i18n="contact.form_email_label"></label>
+              <input type="email" name="email" data-i18n-attr="placeholder:contact.form_email_placeholder" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label data-i18n="contact.form_subject_label"></label>
+            <input type="text" name="subject" data-i18n-attr="placeholder:contact.form_subject_placeholder" required>
+          </div>
+          
+          <div class="form-group">
+            <label data-i18n="contact.form_message_label"></label>
+            <textarea name="message" rows="6" data-i18n-attr="placeholder:contact.form_message_placeholder" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary" data-i18n="contact.form_submit">
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.i18nData = {{ site.data.portfolio | jsonify }};
+</script>
+<script src="/assets/js/portifolio.js"></script>

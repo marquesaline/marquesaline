@@ -59,8 +59,8 @@
   .category-badge {
     display: inline-block;
     padding: 4px 12px;
-    background-color: lighten($primary, 35%);
-    color: $primary;
+    background-color: $primary;
+    color: #FFF;
     border-radius: 16px;
     font-size: 0.8rem;
     font-weight: 600;

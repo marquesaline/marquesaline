@@ -1,6 +1,7 @@
 .blog {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 3rem 0;
 }
 
 .blog-intro {
@@ -66,8 +67,8 @@
     transition: all 0.2s ease;
     
     &:hover {
-      background-color: lighten($primary, 35%);
-      color: $primary;
+      background-color: $primary;
+      color: #FFF;
       text-decoration: none;
     }
     
@@ -92,13 +93,13 @@
 
 .post-item {
   background-color: $bg-primary;
-  padding: $spacing-lg;
+  padding: 2rem;
   border-radius: 12px;
   border: 1px solid transparent;
 }
 
 .post-title {
-  margin-bottom: $spacing-sm;
+  margin-bottom: 1.5rem;
   font-family: $font-body;
   
   a {
@@ -116,7 +117,7 @@
 }
 
 .post-excerpt {
-  margin-bottom: $spacing-md;
+  margin-bottom: 1rem;
   color: $text-dark;
   line-height: 1.6;
   font-size: 1rem;
