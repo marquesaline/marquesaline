@@ -5,9 +5,22 @@
         <img src="{{ site.logo }}" alt="{{ site.title }} logo" class="logo"/>
         {{ site.title | escape }}
       </a>
-      
       <div class="nav-links">
-        <a href="{{ '/sobre' | relative_url }}">Sobre</a>
+        {% if page.layout != 'blog' %}
+          <div class="nav-link">
+            <a href="{{ '/blog' | relative_url }}">Blog</a>
+          </div>
+        {% endif %}
+        {% if page.layout != 'home' %}
+          <div class="nav-link">
+            <a href="{{ '/sobre' | relative_url }}">Sobre</a>
+          </div>
+        {% endif %}
+        {% if page.layout == 'home' %}
+          <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle Language">
+            <span id="flag">🇺🇸</span>
+          </button>
+        {% endif %}
       </div>
     </nav>
   </div>

@@ -13,16 +13,39 @@
       align-items: center;
       color: $text-dark;
 
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include mobile {
+     
+        }
+      }
+
       a {
         color: $text-dark;
         font-family: $font-body;
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          transform: scale(1.2);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
       }
 
       .title {
         display: flex;
         align-items: center;
         color: $text-dark;
-        font-size: $font-size-title;
+        font-size: 1.25rem;
 
         @include mobile {
           font-size: $font-size-subtitle;

@@ -1,0 +1,286 @@
+pt:
+  hero:
+    name: "Aline Marques"
+    title: "Desenvolvedora Full Stack"
+    description: "Desenvolvedora Full Stack especializada em aplicações web escaláveis.
+      Atuo principalmente com Ruby on Rails, React e Hotwire, trabalhando do backend à experiência do usuário.
+      Tenho experiência com produtos reais, arquitetura, cloud e manutenção de sistemas em produção."
+    cta_contact: "Entre em contato"
+    cta_resume: "Visualizar currículo"
+    image_alt: "Foto de Aline Marques"
+    cv_link: "https://docs.google.com/document/d/19OkJMchetz4pePFfz_WuIo-Sk-UxpTwf/edit?usp=sharing&ouid=109228549838407124457&rtpof=true&sd=true"
+  about:
+    title: "Sobre mim"
+    intro: "Sou desenvolvedora full stack com experiência em diferentes áreas do desenvolvimento web. Trabalho com produtos reais e estou sempre buscando evoluir tecnicamente e entender melhor o contexto dos projetos."
+    
+    journey:
+      title: "Minha Jornada"
+      text: "Iniciei minha carreira como desenvolvedora em 2022, atuando como Full Stack com Node.js e Angular.
+        Depois, trabalhei com Django e Angular, o que ampliou minha experiência em backend e arquitetura.
+        Com o tempo, comecei a trabalhar com Ruby on Rails e passei a focar nessa tecnologia, atuando em projetos maiores e em produção.<br><br>
+        Gosto de trabalhar em soluções que resolvem problemas reais, lidando com sistemas existentes, manutenção de legado e evolução contínua dos produtos."
+    
+    skills_title: "Principais Competências"
+    skills:
+      - category: "Frontend"
+        items:
+          - "React.js"
+          - "Hotwire"
+          - "TypeScript"
+          - "Tailwind CSS"
+      
+      - category: "Backend"
+        items:
+          - "Ruby on Rails"
+          - "Django"
+          - "APIs REST"
+          - "Microserviços"
+      
+      - category: "DevOps & Cloud"
+        items:
+          - "Docker"
+          - "Google Cloud Platform (GCP)"
+          - "AWS"
+          - "CI/CD"
+    
+    highlights:
+      - title: "Desenvolvedora Full Stack"
+        description: "Especialista em Ruby on Rails, React e Hotwire"
+      
+      - title: "Trabalho em Equipe"
+        description: "Experiência em times multidisciplinares e em metodologias ágeis"
+  history:
+    title: "Experiência Profissional"
+    intro: "Minha jornada profissional através de empresas inovadoras e projetos desafiadores"
+    experiences:
+      - role: "Desenvolvedora Full Stack"
+        company: "Marmoset Music"
+        period: "Abril 2025 - Presente"
+        location: "EUA - Remoto"
+        status: "Atual"
+        description: "Desenvolvimento e manutenção de soluções escaláveis para uma plataforma de licenciamento musical.
+          Atuação no backend com Ruby on Rails, criação e integração de APIs GraphQL e desenvolvimento de interfaces com React e Hotwire.
+          Uso de AWS, além de trabalho com arquitetura, manutenção de legado e evolução de módulos do produto."
+        technologies:
+          - "Ruby on Rails"
+          - "React.js"
+          - "Hotwire"
+          - "GraphQL"
+          - "AWS"
+          - "PostgreSQL"
+          - "Docker"
+      
+      - role: "Desenvolvedora Full Stack"
+        company: "Cálculo Jurídico"
+        period: "Maio 2023 - Abril 2025"
+        location: "Brasil - Remoto"
+        status: ""
+        description: "Responsável por projetar, implementar e manter diversas aplicações usando Ruby on Rails no back end e Vue.js no front end, garantindo uma arquitetura eficiente e de fácil manutenção. Criação de microsserviços utilizando Google Functions e Google Cloud Run, com foco em automatizar processos e melhorar a eficiência do time de marketing. Implementação de pipelines de integração contínua e entrega contínua (CI/CD) utilizando Google Cloud Build para automatizar o processo de build, testes e deploy. Gerenciamento completo do processo de deploy em produção, incluindo a configuração de ambientes, monitoramento pós-deploy e resolução de problemas em tempo real."
+        technologies:
+          - "Ruby on Rails"
+          - "Vue.js"
+          - "Firebase"
+          - "PostgreSQL"
+          - "GCP"
+          - "Docker"
+      
+      - role: "Desenvolvedora Full Stack"
+        company: "FanHub"
+        period: "Fevereiro 2023 - Abril 2023"
+        location: "Brasil - Remoto"
+        status: ""
+        description: "Desenvolvimento e manutenção de aplicações utilizando Python com o framework Django no backend e Angular no frontend, com foco na criação de uma arquitetura MVC robusta e escalável. Correção de bugs do sistema legado referente ao portal para acesso de usuários, criação e manutenção de testes automatizados, e uso de práticas de controle de versão com Git em ambiente distribuído."
+        technologies:
+          - "Python"
+          - "Django"
+          - "Angular"
+          - "MySQL"
+          - "Docker"
+      
+      - role: "Analista de Soluções Customizadas I"
+        company: "Capgemini"
+        period: "Julho 2022 - Fevereiro 2023"
+        location: "Brasil - Remoto"
+        status: ""
+        description: "Desenvolvimento e manutenção de microserviços e APIs Restful utilizando Node.js com Express no backend e Angular no frontend, garantindo uma arquitetura escalável e eficiente para os clientes. Implementação de soluções customizadas para bancos e seguradoras, otimizando a integração de serviços e processos internos. Criação de testes unitários e de integração usando Jest para garantir a qualidade do código."
+        technologies:
+          - "Node.js"
+          - "Express"
+          - "Angular"
+          - "Jest"
+          - "MongoDB"
+          - "Docker"
+  contact:
+    title: "Vamos Conversar!"
+    subtitle: "Estou sempre aberto para discutir novos projetos, oportunidades criativas ou simplesmente trocar uma ideia sobre tecnologia."
+    
+    info_title: "Informações de Contato"
+    email_label: "Email"
+    email: "alinem_oliveira@yahoo.com"
+    whatsapp_label: "WhatsApp"
+    whatsapp: "+55 (81) 98705-7304"
+    location_label: "Localização"
+    location: "Recife, PE - Brasil"
+    
+    socials_title: "Redes Sociais"
+    
+    availability_title: "Disponível para projetos"
+    availability_text: "Atualmente aceitando novos projetos freelance e oportunidades de colaboração."
+    
+    form_title: "Envie uma Mensagem"
+    form_name_label: "Nome*"
+    form_name_placeholder: "Seu nome completo"
+    form_email_label: "Email*"
+    form_email_placeholder: "seu.email@exemplo.com"
+    form_subject_label: "Assunto*"
+    form_subject_placeholder: "Sobre o que gostaria de conversar?"
+    form_message_label: "Mensagem*"
+    form_message_placeholder: "Descreva seu projeto ou ideia em detalhes..."
+    form_submit: "Enviar Mensagem"
+    form_sending: "Enviando..."
+    form_success: "Mensagem enviada com sucesso! Entrarei em contato em breve."
+    form_error: "Ops! Algo deu errado. Tente novamente ou entre em contato pelo email."
+
+
+en:
+  hero:
+    name: "Aline Marques"
+    title: "Full Stack Developer"
+    description: "Full Stack Developer specialized in scalable web applications.
+      I mainly work with Ruby on Rails, React and Hotwire, building and maintaining real-world products.
+      Experienced with production systems, architecture decisions and cloud environments."
+    cta_contact: "Get in touch"
+    cta_resume: "View resume"
+    image_alt: "Photo of Aline Marques"
+    cv_link: "https://docs.google.com/document/d/1GCR_XQNcegbHHspsPW8if47CTwe3Ddbo/edit?usp=sharing&ouid=109228549838407124457&rtpof=true&sd=true"
+  about:
+    title: "About me"
+    intro: "I'm a full stack developer with experience across different areas of web development. I work with real products and continuously aim to improve technically while understanding the project context."
+    
+    journey:
+      title: "My Journey"
+      text: "I started my career as a developer in 2022, working as a Full Stack developer using Node.js and Angular.
+        After that, I worked with Django and Angular, which expanded my backend and architecture experience.
+        Over time, I began working with Ruby on Rails and have since focused on this technology, contributing to larger, production-ready projects.<br><br>
+        I enjoy working on solutions that address real problems, including maintaining existing systems, handling legacy code and continuously improving products."
+    
+    skills_title: "Key Skills"
+    skills:
+      - category: "Frontend"
+        items:
+          - "React.js"
+          - "Hotwire"
+          - "TypeScript"
+          - "Tailwind CSS"
+      
+      - category: "Backend"
+        items:
+          - "Ruby on Rails"
+          - "Django"
+          - "REST APIs"
+          - "Microservices"
+      
+      - category: "DevOps & Cloud"
+        items:
+          - "Docker"
+          - "Google Cloud Platform (GCP)"
+          - "AWS"
+          - "CI/CD"
+    
+    highlights:
+      - title: "Full Stack Developer"
+        description: "Expert in Ruby on Rails, React and Hotwire"
+      
+      - title: "Teamwork"
+        description: "Experience in multidisciplinary teams and agile methodologies"
+  history:
+    title: "Employment History"
+    intro: "My professional journey through innovative companies and challenging projects"
+    experiences:
+      - role: "Full Stack Developer"
+        company: "Marmoset Music"
+        period: "April 2025 - Present"
+        location: "USA - Remote"
+        status: "Current"
+        description: "Development and maintenance of scalable solutions for a music licensing platform.
+          Backend work using Ruby on Rails, creation and integration of GraphQL APIs, and frontend development with React and Hotwire.
+          Use of AWS, as well as work on architecture, legacy maintenance and product evolution."
+        technologies:
+          - "Ruby on Rails"
+          - "React.js"
+          - "Hotwire"
+          - "GraphQL"
+          - "AWS"
+          - "PostgreSQL"
+          - "Docker"
+      
+      - role: "Full Stack Developer"
+        company: "Cálculo Jurídico"
+        period: "May 2023 - April 2025"
+        location: "Brazil - Remote"
+        status: ""
+        description: "Responsible for designing, implementing and maintaining several applications using Ruby on Rails on the backend and Vue.js on the frontend, ensuring efficient and easy-to-maintain architecture. Creation of microservices using Google Functions and Google Cloud Run, focusing on automating processes and improving marketing team efficiency. Implementation of continuous integration and continuous delivery (CI/CD) pipelines using Google Cloud Build to automate the build, test and deploy process. Complete management of the production deployment process, including environment configuration, post-deployment monitoring and real-time problem resolution."
+        technologies:
+          - "Ruby on Rails"
+          - "Vue.js"
+          - "Firebase"
+          - "PostgreSQL"
+          - "GCP"
+          - "Docker"
+      
+      - role: "Full Stack Developer"
+        company: "FanHub"
+        period: "February 2023 - April 2023"
+        location: "Brazil - Remote"
+        status: ""
+        description: "Development and maintenance of applications using Python with Django framework on the backend and Angular on the frontend, focusing on creating a robust and scalable MVC architecture. Bug fixes in the legacy system related to the user access portal, creation and maintenance of automated tests, and use of version control practices with Git in a distributed environment."
+        technologies:
+          - "Python"
+          - "Django"
+          - "Angular"
+          - "MySQL"
+          - "Docker"
+      
+      - role: "Custom Solutions Analyst I"
+        company: "Capgemini"
+        period: "July 2022 - February 2023"
+        location: "Brazil - Remote"
+        status: ""
+        description: "Development and maintenance of microservices and RESTful APIs using Node.js with Express on the backend and Angular on the frontend, ensuring scalable and efficient architecture for clients. Implementation of customized solutions for banks and insurance companies, optimizing service integration and internal processes. Creation of unit and integration tests using Jest to ensure code quality."
+        technologies:
+          - "Node.js"
+          - "Express"
+          - "Angular"
+          - "Jest"
+          - "MongoDB"
+          - "Docker"
+  contact:
+    title: "Let's Talk!"
+    subtitle: "I'm always open to discussing new projects, creative opportunities or simply exchanging ideas about technology."
+    
+    info_title: "Contact Information"
+    email_label: "Email"
+    email: "alinem_oliveira@yahoo.com"
+    whatsapp_label: "WhatsApp"
+    whatsapp: "+55 (81) 98705-7304"
+    location_label: "Location"
+    location: "Recife, PE - Brazil"
+    
+    socials_title: "Social Media"
+    
+    availability_title: "Available for projects"
+    availability_text: "Currently accepting new freelance projects and collaboration opportunities."
+    
+    form_title: "Send a Message"
+    form_name_label: "Name*"
+    form_name_placeholder: "Your full name"
+    form_email_label: "Email*"
+    form_email_placeholder: "your.email@example.com"
+    form_subject_label: "Subject*"
+    form_subject_placeholder: "What would you like to talk about?"
+    form_message_label: "Message*"
+    form_message_placeholder: "Describe your project or idea in detail..."
+    form_submit: "Send Message"
+    form_sending: "Sending..."
+    form_success: "Message sent successfully! I'll get back to you soon."
+    form_error: "Oops! Something went wrong. Please try again or contact me by email."
