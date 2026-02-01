@@ -6,6 +6,9 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     
     <div class="post-meta">
+      {% include reading-time.html %}
+      <span class="separator">•</span>
+      
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%d" }} de {% include date_pt.html date=page.date %} de {{ page.date | date: "%Y" }}
       </time>

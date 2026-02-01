@@ -1,16 +1,17 @@
 .post {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0.5rem auto 1rem;
   background-color: white;
   border-radius: 8px;
   
-  @include mobile {
+  @include tablet-down {
     padding: $spacing-md;
   }
 }
 
 // Post Header
 .post-header {
+  margin-top: 1rem;
   margin-bottom: $spacing-xl;
   padding-bottom: $spacing-lg;
   border-bottom: 1px solid lighten($text-gray, 20%);
@@ -137,30 +138,67 @@
   
   // Code blocks
   code {
-    font-family: $font-code;
-    font-size: 0.9em;
-    background-color: $bg-gray;
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: $text-dark;
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.875em;
+    color: #e83e8c;
+    font-weight: 500;
   }
   
   pre {
-    background-color: #f6f8fa;
-    padding: $spacing-md;
-    border-radius: 6px;
+    background: #1e1e1e !important;
+    border: 1px solid #3d3d3d;
+    border-radius: 8px;
+    padding: 1.25rem;
     overflow-x: auto;
-    margin-bottom: $spacing-md;
-    border: 1px solid lighten($text-gray, 20%);
-    
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
     code {
-      background: none;
-      padding: 0;
-      font-size: 0.95em;
-      line-height: 1.5;
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      color: #d4d4d4 !important;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+      display: block;
+      font-weight: 400;
+      text-shadow: none !important;
     }
   }
+
+  pre code * {
+    text-shadow: none !important;
+  }
+
+  .highlight .n  { color: #d4d4d4; } /* variables, method receivers */
+  .highlight .no { color: #4ec9b0; } /* constants (User) */
+  .highlight .nf { color: #dcdcaa; } /* methods (new, save) */
+  .highlight .kp { color: #569cd6; } /* keywords (true, false, nil) */
+  .highlight .k  { color: #c586c0; } /* keywords (def, class) */
+  .highlight .ss { color: #9cdcfe; } /* symbols (name:) */
+  .highlight .s, .highlight .s2 { color: #ce9178; } /* strings */
+  .highlight .mi { color: #b5cea8; } /* integers */
+  .highlight .o  { color: #d4d4d4; } /* operators (=, ., etc) */
+  .highlight .p  { color: #d4d4d4; } /* punctuation */
+  .highlight .c, .highlight .c1 { color: #6a9955; font-style: italic; }
   
+  .language-bash pre {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+  }
+
+  .language-bash pre code::before {
+    content: "$ ";
+    color: #22c55e;
+    font-weight: 600;
+  }
+
   img {
     max-width: 100%;
     height: auto;
