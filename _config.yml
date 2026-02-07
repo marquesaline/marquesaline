@@ -14,7 +14,7 @@ logo: '/assets/images/logo.svg'
 instagram_username: maarques_aline
 github_username: marquesaline
 linkedin_username: marques-aline
-
+image: /assets/images/logo.svg
 # Build settings
 markdown: kramdown
   
