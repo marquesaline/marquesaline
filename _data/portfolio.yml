@@ -110,9 +110,12 @@ pt:
           - "Jest"
           - "MongoDB"
           - "Docker"
+  latest_posts:
+    title: "Últimos Posts"
+    cta: "Ver todos os posts"
   contact:
     title: "Vamos Conversar!"
-    subtitle: "Estou sempre aberto para discutir novos projetos, oportunidades criativas ou simplesmente trocar uma ideia sobre tecnologia."
+    subtitle: "Estou sempre aberta para discutir novos projetos, oportunidades criativas ou simplesmente trocar uma ideia sobre tecnologia."
     
     info_title: "Informações de Contato"
     email_label: "Email"
@@ -254,6 +257,9 @@ en:
           - "Jest"
           - "MongoDB"
           - "Docker"
+  latest_posts:
+    title: "Latest Posts"
+    cta: "View all posts"
   contact:
     title: "Let's Talk!"
     subtitle: "I'm always open to discussing new projects, creative opportunities or simply exchanging ideas about technology."

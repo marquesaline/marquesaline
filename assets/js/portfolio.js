@@ -18,32 +18,30 @@ function updateFlag() {
   }
 }
 
+function resolve(data, keyPath) {
+  return keyPath.split('.').reduce((obj, k) => obj && obj[k], data)
+}
+
 function updateContent() {
   const data = i18n[currentLang]
 
   // Textos simples
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const keys = el.getAttribute('data-i18n').split('.')
-    let value = data
-    keys.forEach(k => value = value[k])
-    el.textContent = value
+    const value = resolve(data, el.getAttribute('data-i18n'))
+    if (value != null) el.textContent = value
   })
 
   // Textos com HTML
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const keys = el.getAttribute('data-i18n-html').split('.')
-    let value = data
-    keys.forEach(k => value = value[k])
-    el.innerHTML = value
+    const value = resolve(data, el.getAttribute('data-i18n-html'))
+    if (value != null) el.innerHTML = value
   })
 
   // Atributos
   document.querySelectorAll('[data-i18n-attr]').forEach(el => {
     const [attrName, key] = el.getAttribute('data-i18n-attr').split(':')
-    const keys = key.split('.')
-    let value = data
-    keys.forEach(k => value = value[k])
-    el.setAttribute(attrName, value)
+    const value = resolve(data, key)
+    if (value != null) el.setAttribute(attrName, value)
   })
 
   // Link do CV
@@ -156,10 +154,17 @@ function showFeedback(element, message, type) {
 
 
 // INICIALIZAÇÃO
+function detectLang() {
+  const saved = localStorage.getItem('preferredLang')
+  if (saved) return saved
+  const lang = navigator.language || 'en'
+  return lang.startsWith('pt') ? 'pt' : 'en'
+}
+
 function init(data) {
   i18n = data
-  currentLang = localStorage.getItem('preferredLang') || 'pt'
-  
+  currentLang = detectLang()
+
   updateContent()
   updateFlag()
   initContactForm()

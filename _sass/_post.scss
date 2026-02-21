@@ -21,7 +21,7 @@
   font-family: $font-title;
   font-size: 2.5rem;
   line-height: 1.2;
-  margin-bottom: $spacing-md;
+  margin-bottom: 1rem;
   color: $text-dark;
   
   @include mobile {
@@ -71,6 +71,84 @@
       background-color: lighten($primary, 30%);
       transform: scale(1.05);
       text-decoration: none;
+    }
+  }
+}
+
+// Table of Contents
+.toc-wrapper {
+  margin-bottom: $spacing-md;
+}
+
+.toc {
+  border: 1px solid lighten($primary, 15%);
+  border-left: 3px solid $primary;
+  border-radius: 6px;
+  background-color: $bg-gray;
+}
+
+.toc-summary {
+  padding: $spacing-xs $spacing-sm;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: $text-dark;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+
+  &::before {
+    content: '▸';
+    color: $primary;
+    transition: transform 0.2s ease;
+    display: inline-block;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+details[open] .toc-summary::before {
+  transform: rotate(90deg);
+}
+
+.toc-nav {
+  padding: $spacing-xs $spacing-sm $spacing-sm;
+  border-top: 1px solid lighten($primary, 15%);
+
+  ul {
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 0.3rem;
+
+      &.toc-h3 {
+        padding-left: 1rem;
+      }
+
+      a {
+        color: $text-dark;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &::before {
+          content: '• ';
+          color: $primary;
+        }
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+
+      &.toc-h3 a::before {
+        content: '◦ ';
+      }
     }
   }
 }

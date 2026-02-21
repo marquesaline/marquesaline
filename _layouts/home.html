@@ -47,6 +47,28 @@ layout: default
   </div>
 </section>
 
+<section class="latest-posts">
+  <div class="section-container">
+    <div class="title">
+      <h2 class="section-title" data-i18n="latest_posts.title">Últimos Posts</h2>
+    </div>
+    <div class="latest-posts-grid">
+      {% for post in site.posts limit:3 %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          {% if post.categories.size > 0 %}
+            <span class="post-card-category">{{ post.categories | first }}</span>
+          {% endif %}
+          <h3 class="post-card-title">{{ post.title }}</h3>
+          <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%d/%m/%Y" }}
+          </time>
+        </a>
+      {% endfor %}
+    </div>
+    <a href="/blog/" class="btn-light" data-i18n="latest_posts.cta">Ver todos os posts</a>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="section-container">
     <div class="title">

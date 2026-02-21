@@ -6,11 +6,11 @@ pagination:
 
 <div class="blog">
   <div class="blog-intro">
-    <h1>Anotações sobre Ruby, Rails e desenvolvimento web</h1>
+    <h1>Reflexões e anotações sobre Ruby, Rails e arquitetura de software.</h1>
   </div>
 
   {% include search_bar.html %}
   {% include categories.html %}
-  {% include post_list.html posts=site.posts %}
+  {% include post_list.html posts=paginator.posts %}
   {% include pagination.html %}
 </div>

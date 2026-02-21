@@ -1,0 +1,35 @@
+<div class="toc-wrapper" id="toc-wrapper" style="display:none">
+  <details class="toc">
+    <summary class="toc-summary">Sumário</summary>
+    <nav class="toc-nav">
+      <ul id="toc-list"></ul>
+    </nav>
+  </details>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var content = document.querySelector('.post-content')
+    if (!content) return
+
+    var headings = content.querySelectorAll('h2, h3')
+    if (headings.length < 2) return
+
+    var list = document.getElementById('toc-list')
+    var wrapper = document.getElementById('toc-wrapper')
+
+    headings.forEach(function(heading) {
+      var li = document.createElement('li')
+      if (heading.tagName === 'H3') li.classList.add('toc-h3')
+
+      var a = document.createElement('a')
+      a.href = '#' + heading.id
+      a.textContent = heading.textContent
+
+      li.appendChild(a)
+      list.appendChild(li)
+    })
+
+    wrapper.style.display = 'block'
+  })
+</script>

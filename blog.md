@@ -1,6 +1,8 @@
 ---
 layout: blog
 title: Blog
-description: Anotações sobre Ruby, Rails e desenvolvimento web
+description: Reflexões e anotações sobre Ruby, Rails e arquitetura de software.
 permalink: /blog/
+pagination:
+  enabled: true
 ---
