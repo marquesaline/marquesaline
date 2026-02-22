@@ -51,6 +51,12 @@ function updateContent() {
   // Lang do documento
   document.documentElement.lang = currentLang === 'pt' ? 'pt-BR' : 'en'
 
+  // Seção de últimos posts só faz sentido em PT (posts são sempre em PT)
+  const latestPostsSection = document.querySelector('.latest-posts')
+  if (latestPostsSection) {
+    latestPostsSection.style.display = currentLang === 'pt' ? '' : 'none'
+  }
+
   // Renderiza conteúdo dinâmico
   renderSkills(data)
   renderTimeline(data)
