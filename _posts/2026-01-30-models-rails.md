@@ -17,7 +17,7 @@ Essas quatro operações formam o famoso CRUD: Create, Read, Update e Delete. E 
 
 O ActiveRecord, de maneira geral, é a gem responsável por fazer essa ponte entre o Rails e o banco de dados. Ele facilita nosso trabalho com as tabelas do banco, de forma que elas se tornam objetos Ruby. Então, no dia a dia, a gente não precisa escrever em SQL, o ActiveRecord vai fazer isso pra gente. 
 
-Já te adianto, que por trás existe um padrão de arquitetura muito mais amplo, mas esse é um tópico pra outro post. 
+Já te adianto que por trás disso existe um padrão de arquitetura muito mais amplo. Se você quiser entender melhor esse conceito, escrevi um post específico sobre o [padrão Active Record](/padrao-active-record)
 
 Hoje, a ideia é olhar pra o ActiveRecord de forma mais prática pra entender como usar os principais métodos de CRUD. 
 
