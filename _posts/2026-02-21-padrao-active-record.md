@@ -172,7 +172,21 @@ E aí surgem gambiarras para "encaixar" o modelo de negócio na estrutura do ban
 
 Isso não significa que o Active Record seja um erro ou uma má escolha. Significa apenas que ele faz uma escolha arquitetural clara: prioriza simplicidade e proximidade com o banco. Em muitos cenários isso é excelente. Em outros, pode exigir mais cuidado na organização do código.
 
-É por isso que é importante conhecer padrões de arquitetura de software. No fim, a escolha certa sempre depende do contexto.
+## Por que ainda vale entender esse padrão?
+
+Talvez você esteja pensando: “Tá, mas hoje em dia o Rails já faz tudo isso. Então pra que eu preciso saber que isso é um padrão?”
+
+E é uma dúvida totalmente válida.
+
+A verdade é que o Rails não inventou o Active Record. Ele se inspirou em algo que já existia como decisão arquitetural. O padrão veio antes dos frameworks que a gente usa hoje.
+
+Na época, a preocupação era organizar melhor a forma como as aplicações acessavam o banco de dados, especialmente em sistemas maiores.
+
+Então quando a gente entende o padrão, a gente começa a perceber que o Rails não faz as coisas “porque sim”. Ele faz porque alguém, lá atrás, tomou uma decisão arquitetural específica.
+
+E entender essa decisão muda a forma como a gente pensa arquitetura.
+
+Mesmo que você nunca implemente um Active Record “na mão”, saber o que está por trás ajuda a enxergar os limites da abordagem e a não tratar framework como mágica.
 
 Ah e caso você tenha interesse em aprofundar sobre esse e outros padrões, o livro de Martin Fowler pode ajudar.
 
