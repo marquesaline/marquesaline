@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Símbolos em Ruby (Symbols)"
-description: "Descubra o que são variáveis e constantes em Ruby e entenda de forma simples quando usar cada uma"
+description: "Entenda o que são símbolos (symbols) em Ruby, como funcionam e quando usá-los no lugar de strings."
 permalink: "/simbolos-ruby"
 date: 2025-12-08
 categories: [Ruby]

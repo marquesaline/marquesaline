@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Tipos de Dados em Ruby"
-description: "Notas sobre os tipos básicos de dados em Ruby — Integer, Float, String, Boolean e Nil"
+title:  "Tipos de Dados em Ruby: Integer, Float, String, Boolean e Nil"
+description: "Conheça os principais tipos de dados em Ruby — Integer, Float, String, Boolean e Nil — e entenda como cada um funciona na prática."
 permalink: "/tipos-de-dados-em-ruby"
 date: 2025-10-29
 categories: [Ruby]

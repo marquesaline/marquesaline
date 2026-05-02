@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Padrão Active Record"
-description: "Entenda o que é o padrão Active Record, como ele funciona e quando faz sentido utilizá-lo."
+title: "Padrão Active Record: o que é e como funciona"
+description: "Entenda o que é o padrão arquitetural Active Record, como ele funciona e por que o Rails o adota como base do seu ORM."
 permalink: "/padrao-active-record"
 date: 2026-02-21
 categories: [Arquitetura de Software]

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hashes em Ruby"
-description: "Entenda o que são hashes em Ruby, por que eles são necessários e como usá-los no dia a dia da programação."
+title: "Hashes em Ruby: o que são e como usar"
+description: "Aprenda o que são hashes em Ruby, como usar pares de chave e valor para organizar dados e manipulá-los na prática."
 permalink: "/ruby-hashes"
 date: 2026-03-02
 categories: [Ruby]

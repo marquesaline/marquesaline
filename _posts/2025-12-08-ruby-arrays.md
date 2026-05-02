@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Arrays em Ruby"
-description: "Entenda o que são arrays em Ruby, por que eles são necessários e como usá-los no dia a dia da programação."
+title: "Arrays em Ruby: o que são e como usar"
+description: "Aprenda o que são arrays em Ruby, como armazenar e manipular listas de dados e veja exemplos práticos de uso."
 permalink: "/ruby-arrays"
 date: 2025-12-08
 categories: [Ruby]
