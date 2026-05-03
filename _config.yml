@@ -15,6 +15,13 @@ instagram_username: maarques_aline
 github_username: marquesaline
 linkedin_username: marques-aline
 image: /assets/images/logo.png
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image: /assets/images/logo.png
+
 # Build settings
 markdown: kramdown
   
@@ -43,7 +50,9 @@ jekyll-archives:
   permalinks:
     category: '/:name/'
 
-author: Aline Marques
+author:
+  name: Aline Marques
+  url: https://alinemarques.dev
 
 social:
   name: Aline Marques
