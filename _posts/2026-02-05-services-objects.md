@@ -188,12 +188,7 @@ Dá pra perceber de cara que esse controller não está só orquestrando a requi
 
 E aí vem um ponto importante... esse código funcionaria? Sim! Mas ficaria difícil testar e fazer a manutenção.
 
-Então, fique atento a alguns sinais comuns que indicam que é um momento de usar o services objects:
-
-- Controller crescendo demais e contendo cada vez mais lógica de negócio, quando deveria apenas orquestrar.
-- Uma mesma regra ou fluxo começa a ser repetido em diferentes controllers, jobs ou callbacks.
-- O model começa a concentrar responsabilidades que não dizem respeito diretamente à entidade em si.
-- Entre outros...
+Alguns sinais de que chegou a hora de usar um service object: o controller começa a crescer com lógica que não é responsabilidade dele, uma mesma regra começa a aparecer em lugares diferentes (controllers, jobs, callbacks) ou o model passa a concentrar comportamentos que não têm nada a ver com a entidade em si.
 
 Uma coisa que me ajuda muito é tentar explicar determinado model ou controller em voz alta pra mim mesma. Explicar o código sempre é útil pra entender melhor o que ele está fazendo e se tem coisa demais dentro de um controller ou de um model que foge a responsabilidade deles, isso já é um sinal.
 
@@ -201,14 +196,9 @@ Uma coisa que me ajuda muito é tentar explicar determinado model ou controller 
 
 Apesar de serem muito úteis, service objects não precisam ser usados em todos os cenários.
 
-Alguns exemplos de situações em que um service object pode ser desnecessário:
+Operações simples de CRUD, validações que pertencem ao model, filtros que se resolvem com um scope... nesses casos, criar um service object só adiciona complexidade desnecessária. A extração só faz sentido quando deixa o código mais fácil de entender, não quando é feita por hábito ou pra "parecer mais organizado".
 
-- Operações simples de CRUD, como criar ou atualizar um registro sem regras adicionais.
-- Lógicas que pertencem claramente ao model, como validações ou pequenos comportamentos da entidade.
-- Consultas e filtros de dados, que costumam ser melhor representados por scopes.
-- Casos em que a extração para um service object adicionaria mais complexidade do que benefício.
-
-Um exemplo comum de caso em que um service object não é necessário é quando a lógica pertence claramente ao próprio model.
+Um exemplo concreto de quando não usar é quando a lógica pertence claramente ao próprio model.
 
 Imagine um model simples de usuário com uma validação e um pequeno comportamento:
 
