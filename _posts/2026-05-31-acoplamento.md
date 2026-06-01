@@ -21,7 +21,7 @@ Então, basicamente, estamos falando da dependência entre componentes de um sis
 
 Quanto mais acoplados os componentes, mais difícil se torna de manter ou testar, porque você sempre vai depender de outro componente pra isso.
 
-E quando a gente fala de "componente", pode ser uma classe, um módulo, um serviço inteiro, ou até um time de desenvolvimento.
+E só pra deixar claro, quando a gente fala de "componente", pode ser uma classe, um módulo, um serviço inteiro, um domínio, etc.
 
 Vamos pensar em um exemplo.
 
@@ -64,6 +64,21 @@ end
 
 Os dois serviços nunca se chamam diretamente. Mas se a coluna `value` for renomeada pra `total_value`, os dois quebram. A dependência não está no código de um chamando o outro, está na estrutura compartilhada do banco.
 
+Outro lugar onde isso aparece bastante é dentro de um monólito Rails, quando módulos de domínios diferentes acessam os modelos um do outro diretamente.
+
+```ruby
+# módulo de cobrança acessando diretamente o modelo de usuário
+class BillingService
+  def generate_invoice(user_id)
+    user = User.find(user_id)
+    address = user.profile.billing_address
+    Invoice.create!(user: user, address: address)
+  end
+end
+```
+
+`BillingService` sabe que `User` tem um `Profile` e que esse profile tem um `billing_address`. Se a estrutura interna de `User` ou de `Profile` mudar, o módulo de cobrança sente, mesmo sendo um domínio completamente diferente.
+
 ### Temporal
 
 O acoplamento temporal acontece quando dois componentes precisam estar disponíveis ao mesmo tempo pra que o sistema funcione.
@@ -85,7 +100,30 @@ end
 
 Não tem nada de errado no código em si. O problema é arquitetural: uma chamada síncrona cria uma dependência de tempo entre os dois serviços. Se um cai, o outro sente.
 
+E esse tipo de acoplamento não aparece só em chamadas HTTP. Jobs agendados também sofrem disso, vamos ver outro exemplo. 
+
+```ruby
+# job que agrega dados de vendas (roda à meia-noite)
+class AggregateSalesJob < ApplicationJob
+  def perform
+    Sale.where("created_at >= ?", 1.day.ago).each { |sale| SalesReport.aggregate(sale) }
+  end
+end
+
+# job que envia o relatório por email (roda às 00:30)
+class SendDailyReportJob < ApplicationJob
+  def perform
+    report = SalesReport.daily_summary
+    ReportMailer.daily(report).deliver_now
+  end
+end
+```
+
+Se `AggregateSalesJob` demorar mais que 30 minutos, `SendDailyReportJob` dispara com dados incompletos. Nenhum job chama o outro, mas estão acoplados pelo horário.
+
 Agora que a gente entende o que é acoplamento e como ele aparece, vale falar sobre como reduzir isso.
+
+Mas vale deixar claro que o objetivo não é ter zero acoplamento. Todo sistema tem e precisa ter algum, senão os componentes nem se falam. O que a gente quer é evitar acoplamento desnecessários.
 
 ## Como desacoplar
 
@@ -117,13 +155,15 @@ Já pra o estático, a ideia é evitar que um componente navegue pela estrutura 
 
 ### Lei de Demeter
 
-A Lei de Demeter diz que um objeto deve falar só com seus vizinhos diretos, sem sair navegando pela estrutura de outros objetos. 
+A Lei de Demeter diz que um objeto deve falar só com seus vizinhos diretos, sem navegar pela estrutura de outros objetos.
 
-E o que seria vizinhos diretos?
+Vizinhos diretos são o que o objeto conhece de primeira mão: ele mesmo, os parâmetros que ele recebe, e os objetos que ele criou ou já tem como atributo.
 
-Vizinhos diretos são o que o objeto conhece de primeira mão: ele mesmo, os parâmetros que ele recebe, e os objetos que ele criou ou já tem como atributo. Qualquer coisa que você precisa navegar por outro objeto pra chegar, não é vizinho direto.
+Navegar, nesse contexto, é sair de um objeto e atravessar outros pra chegar onde você quer. 
 
-O sinal de alerta é quando você vê uma cadeia longa de chamadas. 
+Quando você escreve `order.customer.address.city`, você está navegando: começa em `order`, passa por `customer`, passa por `address`, e só então chega em `city`. Cada ponto é um objeto diferente sendo atravessado.
+
+Vamos ver um exemplo.
 
 Imagina um `InvoiceService` que precisa da cidade do cliente pra calcular o imposto:
 
@@ -141,7 +181,7 @@ O problema aqui é que `InvoiceService` sabe que `Order` tem um `Customer`, que 
 
 Se a estrutura de `Address` mudar, por exemplo, a cidade passar a ficar num objeto `Location`, o `InvoiceService` quebra mesmo sem ter nada a ver com esse modelo.
 
-A solução é fazer `Order` expor só o que quem está de fora precisa saber. Em Rails, a gente faz isso com `delegate`:
+Uma possível solução é fazer `Order` expor só o que quem está de fora precisa saber. Em Rails, a gente faz isso com `delegate`:
 
 ```ruby
 class Order < ApplicationRecord
@@ -165,10 +205,12 @@ Agora `InvoiceService` só conhece `Order`. Se `Address` mudar internamente, só
 
 Não é uma regra absoluta, mas é um bom sinal de que um componente está sabendo demais sobre a estrutura interna de outro.
 
-No fundo, a ideia é essa: cada objeto esconde a própria estrutura e expõe só o que precisa. Quem está de fora não precisa saber como as coisas estão organizadas por dentro.
+No fundo, a ideia é essa: cada objeto esconde a própria estrutura e expõe só o que precisa. Quem está de fora não precisa saber como as coisas estão organizadas por dentro, beleza?!
 
 Então, a gente entendeu um pouquinho sobre como funciona acoplamento. Esse é um daqueles conceitos que parece simples na definição, mas vai ficando mais interessante conforme você começa a enxergar ele em diferentes níveis.
 
-Bom, espero que tenha conseguido te ajudar a entender um pouco mais sobre acoplamento.
+E tenha em mente que só citei alguns exemplos de acoplamento, porque a verdade é que pode acontecer de diversas formas no código. 
+
+Bom, espero que tenha conseguido te ajudar a entender um pouco mais sobre esse tema.
 
 Até a próxima!
