@@ -1,9 +1,8 @@
 .post {
-  max-width: 1024px;
+  max-width: 740px;
   margin: 0.5rem auto 1rem;
-  background-color: white;
-  border-radius: 8px;
-  
+  background-color: $bg-white;
+
   @include tablet-down {
     padding: $spacing-md;
   }
@@ -11,28 +10,29 @@
 
 // Post Header
 .post-header {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid lighten($text-gray, 20%);
+  border-bottom: 1px solid rgba($text-gray, 0.14);
 }
 
 .post-title {
   font-family: $font-title;
-  font-size: 2.5rem;
-  line-height: 1.2;
+  font-size: 2.25rem;
+  line-height: 1.25;
   margin-bottom: 1rem;
   color: $text-dark;
-  
+  letter-spacing: -0.02em;
+
   @include mobile {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
 .post-description {
-  font-size: 1.2rem;
-  color: $text-dark;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  color: $text-gray;
+  line-height: 1.65;
   margin-top: $spacing-md;
 }
 
@@ -41,35 +41,36 @@
   align-items: center;
   gap: $spacing-xs;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: $text-gray;
-  
+
   time {
     font-weight: 500;
   }
-  
+
   .separator {
-    color: lighten($text-gray, 10%);
+    color: rgba($text-gray, 0.5);
   }
-  
+
   .post-categories {
     display: flex;
-    gap: 6px;
+    gap: 5px;
   }
-  
+
   .category-badge {
     display: inline-block;
-    padding: 4px 12px;
-    background-color: $primary;
-    color: #FFF;
-    border-radius: 16px;
-    font-size: 0.8rem;
+    padding: 3px 10px;
+    background-color: $primary-light;
+    color: $primary;
+    border-radius: 4px;
+    font-size: 0.75rem;
     font-weight: 600;
-    transition: all 0.2s ease;
-    
+    letter-spacing: 0.03em;
+    transition: all 0.15s ease;
+
     &:hover {
-      background-color: lighten($primary, 30%);
-      transform: scale(1.05);
+      background-color: $primary;
+      color: $text-white;
       text-decoration: none;
     }
   }
@@ -81,16 +82,16 @@
 }
 
 .toc {
-  border: 1px solid lighten($primary, 15%);
+  border: 1px solid rgba($primary, 0.2);
   border-left: 3px solid $primary;
-  border-radius: 6px;
-  background-color: $bg-gray;
+  border-radius: 4px;
+  background-color: $bg-light;
 }
 
 .toc-summary {
-  padding: $spacing-xs $spacing-sm;
+  padding: 0.625rem $spacing-sm;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: $text-dark;
   cursor: pointer;
   list-style: none;
@@ -117,7 +118,7 @@ details[open] .toc-summary::before {
 
 .toc-nav {
   padding: $spacing-xs $spacing-sm $spacing-sm;
-  border-top: 1px solid lighten($primary, 15%);
+  border-top: 1px solid rgba($primary, 0.15);
 
   ul {
     margin: 0;
@@ -131,23 +132,24 @@ details[open] .toc-summary::before {
       }
 
       a {
-        color: $text-dark;
+        color: $text-gray;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.875rem;
 
         &::before {
-          content: '• ';
+          content: '· ';
           color: $primary;
+          font-weight: 700;
         }
 
         &:hover {
           color: $primary;
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
 
       &.toc-h3 a::before {
-        content: '◦ ';
+        content: '  ◦ ';
       }
     }
   }
@@ -155,50 +157,53 @@ details[open] .toc-summary::before {
 
 // Post Content
 .post-content {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.075rem;
+  line-height: 1.85;
   color: $text-dark;
-  
+
   h2, h3, h4, h5, h6 {
     font-family: $font-title;
     margin-top: $spacing-lg;
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacing-sm;
     color: $text-dark;
+    letter-spacing: -0.015em;
   }
-  
+
   h2 {
-    font-size: 1.8rem;
-    padding-bottom: $spacing-sm;
-    border-bottom: 2px solid lighten($primary, 30%);
+    font-size: 1.625rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid rgba($text-gray, 0.16);
+    margin-bottom: $spacing-md;
   }
-  
+
   h3 {
-    font-size: 1.5rem;
-  }
-  
-  h4 {
     font-size: 1.3rem;
   }
-  
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
   p {
     margin-bottom: $spacing-sm;
   }
-  
+
   ul, ol {
     margin-bottom: $spacing-md;
     margin-left: $spacing-lg;
-    
+
     li {
       margin-bottom: $spacing-xs;
     }
   }
-  
+
   a {
     color: $primary;
     text-decoration: underline;
+    text-underline-offset: 2px;
 
     &:hover {
-      color: darken($primary, 10%);
+      color: darken($primary, 12%);
     }
   }
 
@@ -206,60 +211,65 @@ details[open] .toc-summary::before {
     width: 100%;
     border-collapse: collapse;
     margin: $spacing-md 0;
-    font-size: 0.95rem;
+    font-size: 0.925rem;
     overflow-x: auto;
     display: block;
 
     th, td {
-      padding: 0.75rem 1rem;
+      padding: 0.625rem 1rem;
       text-align: left;
-      border: 1px solid lighten($text-gray, 15%);
+      border: 1px solid rgba($text-gray, 0.18);
     }
 
     th {
-      background-color: $bg-gray;
+      background-color: $bg-light;
       font-weight: 600;
       color: $text-dark;
       white-space: nowrap;
+      font-size: 0.875rem;
+      letter-spacing: 0.02em;
     }
 
     tr:nth-child(even) td {
-      background-color: $bg-light;
+      background-color: rgba($bg-light, 0.5);
     }
   }
-  
+
   blockquote {
     margin: $spacing-md 0;
     padding: $spacing-sm $spacing-md;
-    border-left: 4px solid $primary;
-    background-color: lighten($primary, 40%);
+    border-left: 3px solid $primary;
+    background-color: $primary-light;
+    border-radius: 0 4px 4px 0;
     font-style: italic;
-    
+    color: $text-gray;
+
     p {
       margin: 0;
     }
   }
-  
-  // Code blocks
+
+  // Inline code
   code {
-    background: #f6f8fa;
-    border: 1px solid #e1e4e8;
-    padding: 3px 6px;
-    border-radius: 4px;
+    background: #F4F4F5;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 2px 6px;
+    border-radius: 3px;
     font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: 0.875em;
-    color: #e83e8c;
+    font-size: 0.85em;
+    color: #18181B;
     font-weight: 500;
   }
-  
+
+  // Code blocks
   pre {
     background: #1e1e1e !important;
-    border: 1px solid #3d3d3d;
-    border-radius: 8px;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
     padding: 1.25rem;
     overflow-x: auto;
     margin: 1.5rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 
     code {
       background: none !important;
@@ -267,8 +277,8 @@ details[open] .toc-summary::before {
       padding: 0 !important;
       color: #d4d4d4 !important;
       font-size: 0.875rem;
-      line-height: 1.6;
-      font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+      line-height: 1.65;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
       display: block;
       font-weight: 400;
       text-shadow: none !important;
@@ -279,40 +289,39 @@ details[open] .toc-summary::before {
     text-shadow: none !important;
   }
 
-  .highlight .n  { color: #d4d4d4; } /* variables, method receivers */
-  .highlight .no { color: #4ec9b0; } /* constants (User) */
-  .highlight .nf { color: #dcdcaa; } /* methods (new, save) */
-  .highlight .kp { color: #569cd6; } /* keywords (true, false, nil) */
-  .highlight .k  { color: #c586c0; } /* keywords (def, class) */
-  .highlight .ss { color: #9cdcfe; } /* symbols (name:) */
-  .highlight .s, .highlight .s2 { color: #ce9178; } /* strings */
-  .highlight .mi { color: #b5cea8; } /* integers */
-  .highlight .o  { color: #d4d4d4; } /* operators (=, ., etc) */
-  .highlight .p  { color: #d4d4d4; } /* punctuation */
+  .highlight .n  { color: #d4d4d4; }
+  .highlight .no { color: #4ec9b0; }
+  .highlight .nf { color: #dcdcaa; }
+  .highlight .kp { color: #569cd6; }
+  .highlight .k  { color: #c586c0; }
+  .highlight .ss { color: #9cdcfe; }
+  .highlight .s, .highlight .s2 { color: #ce9178; }
+  .highlight .mi { color: #b5cea8; }
+  .highlight .o  { color: #d4d4d4; }
+  .highlight .p  { color: #d4d4d4; }
   .highlight .c, .highlight .c1 { color: #6a9955; font-style: italic; }
-  
+
   .language-bash pre {
-    background: #0f172a;
-    border: 1px solid #1e293b;
-    border-radius: 8px;
+    background: #141414;
+    border: 1px solid #2a2a2a;
   }
 
   .language-bash pre code::before {
     content: "$ ";
-    color: #22c55e;
+    color: #6a9955;
     font-weight: 600;
   }
 
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     margin: $spacing-md 0;
   }
-  
+
   hr {
     border: none;
-    border-top: 1px solid lighten($text-gray, 20%);
+    border-top: 1px solid rgba($text-gray, 0.16);
     margin: $spacing-lg 0;
   }
 }
@@ -321,53 +330,58 @@ details[open] .toc-summary::before {
 .post-footer {
   margin-top: $spacing-xl;
   padding-top: $spacing-lg;
-  border-top: 1px solid lighten($text-gray, 20%);
+  border-top: 1px solid rgba($text-gray, 0.14);
 }
 
 .post-navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $spacing-md;
-  
+  gap: $spacing-sm;
+
   @include mobile {
     grid-template-columns: 1fr;
   }
-  
+
   .nav-link {
     display: flex;
     flex-direction: column;
-    padding: $spacing-md;
-    background-color: $bg-gray;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    
+    padding: 1.125rem $spacing-md;
+    background-color: $bg-light;
+    border: 1px solid rgba($text-gray, 0.15);
+    border-radius: 6px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+
     &:hover {
-      background-color: lighten($primary, 35%);
+      background-color: $primary-light;
+      border-color: rgba($primary, 0.3);
       text-decoration: none;
-      transform: translateY(-2px);
     }
-    
+
     .nav-label {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       color: $text-gray;
       margin-bottom: $spacing-xs;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
-    
+
     .nav-title {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: $text-dark;
+      line-height: 1.4;
     }
   }
-  
+
   .nav-prev {
     text-align: left;
   }
-  
+
   .nav-next {
     text-align: right;
     grid-column: 2;
-    
+
     @include mobile {
       grid-column: 1;
     }

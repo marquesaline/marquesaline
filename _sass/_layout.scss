@@ -1,11 +1,12 @@
 .header {
-  background-color: $bg-primary;
-  padding: 1rem $spacing-lg;
+  background-color: $bg-white;
+  border-bottom: 1px solid rgba($text-gray, 0.14);
+  padding: 0.875rem $spacing-lg;
 
   @include mobile {
-    padding: $spacing-sm;
+    padding: 0.75rem $spacing-sm;
   }
-  
+
   .container {
     .nav {
       display: flex;
@@ -16,48 +17,62 @@
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 10px;
-
-        @include mobile {
-     
-        }
+        gap: 1.5rem;
       }
 
       a {
         color: $text-dark;
         font-family: $font-body;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $primary;
+          text-decoration: none;
+        }
       }
 
       button {
         background: none;
         border: none;
         cursor: pointer;
-        font-size: 1.2rem;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-size: 1.1rem;
+        transition: transform 0.2s ease;
 
         &:hover {
-          transform: scale(1.2);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transform: scale(1.15);
         }
       }
 
       .title {
         display: flex;
         align-items: center;
+        gap: 0.3rem;
         color: $text-dark;
-        font-size: 1.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        text-decoration: none;
 
-        @include mobile {
-          font-size: $font-size-subtitle;
+        &:hover {
+          color: $primary;
         }
 
-        .logo {
-          width: 60px;
-          height: 60px;
+        @include mobile {
+          font-size: 0.95rem;
+        }
 
-          @include mobile {
-            width: 50px;
-            height: 50px;
+        .logo-mark {
+          font-family: $font-code;
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: $text-dark;
+          letter-spacing: 0.01em;
+
+          .brace {
+            color: $primary;
           }
         }
       }
@@ -66,8 +81,9 @@
 }
 
 .footer {
-  background-color: $bg-primary;
-  padding: $spacing-lg;
+  background-color: $bg-white;
+  border-top: 1px solid rgba($text-gray, 0.14);
+  padding: $spacing-md $spacing-lg;
 
   .container {
     display: flex;
@@ -75,33 +91,35 @@
     justify-content: space-between;
 
     .copy {
-      color: $text-dark;
-      font-size: $font-size-base;
+      color: $text-gray;
+      font-size: 0.875rem;
       font-family: $font-body;
     }
 
     .social-links {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
 
       a {
         display: inline-flex;
         align-items: center;
-        transition: transform 0.2s ease;
+        opacity: 0.7;
+        transition: opacity 0.2s ease, transform 0.2s ease;
 
         &:hover {
-          transform: scale(1.2);
+          opacity: 1;
+          transform: translateY(-1px);
         }
       }
 
       svg {
-        fill: $primary;
+        fill: $text-dark;
         transition: fill 0.2s ease;
       }
 
       a:hover svg {
-        fill: darken($primary, 10%);
+        fill: $primary;
       }
     }
   }

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#4F7396"/>
+  <text x="16" y="21"
+    font-family="'Courier New', 'Lucida Console', monospace"
+    font-size="11"
+    font-weight="700"
+    fill="#ffffff"
+    text-anchor="middle">{am}</text>
+</svg>
