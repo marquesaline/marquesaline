@@ -54,7 +54,7 @@ pt:
     intro: "Minha jornada profissional através de empresas inovadoras e projetos desafiadores"
     experiences:
       - role: "Desenvolvedora Full Stack"
-        company: "Marmoset Music"
+        company: "Marmoset"
         period: "Abril 2025 - Presente"
         location: "EUA - Remoto"
         status: "Atual"
@@ -201,7 +201,7 @@ en:
     intro: "My professional journey through innovative companies and challenging projects"
     experiences:
       - role: "Full Stack Developer"
-        company: "Marmoset Music"
+        company: "Marmoset"
         period: "April 2025 - Present"
         location: "USA - Remote"
         status: "Current"
