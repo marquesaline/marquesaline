@@ -3,8 +3,8 @@ pt:
     name: "Aline Marques"
     title: "Desenvolvedora Full Stack"
     description: "Desenvolvedora Full Stack especializada em aplicações web escaláveis.
-      Atuo principalmente com Ruby on Rails, React e Hotwire, trabalhando do backend à experiência do usuário.
-      Tenho experiência com produtos reais, arquitetura, cloud e manutenção de sistemas em produção."
+      Atuo com Ruby on Rails, React, Node.js e GraphQL, do backend à experiência do usuário.
+      Tenho experiência com produtos reais, integrações, performance e manutenção de sistemas em produção."
     cta_contact: "Entre em contato"
     cta_resume: "Visualizar currículo"
     image_alt: "Foto de Aline Marques"
@@ -18,29 +18,29 @@ pt:
       text: "Iniciei minha carreira como desenvolvedora em 2022, atuando como Full Stack com Node.js e Angular.
         Depois, trabalhei com Django e Angular, o que ampliou minha experiência em backend e arquitetura.
         Com o tempo, comecei a trabalhar com Ruby on Rails e passei a focar nessa tecnologia, atuando em projetos maiores e em produção.<br><br>
-        Gosto de trabalhar em soluções que resolvem problemas reais, lidando com sistemas existentes, manutenção de legado e evolução contínua dos produtos."
+        Hoje trabalho com um stack mais amplo, incluindo React, Node.js e GraphQL, com ênfase em performance, integrações com serviços externos e evolução de plataformas em produção."
     
     skills_title: "Principais Competências"
     skills:
       - category: "Frontend"
         items:
           - "React.js"
+          - "Next.js"
           - "Hotwire"
           - "TypeScript"
-          - "Tailwind CSS"
-      
+
       - category: "Backend"
         items:
           - "Ruby on Rails"
-          - "Django"
+          - "Node.js"
+          - "GraphQL"
           - "APIs REST"
-          - "Microserviços"
-      
+
       - category: "DevOps & Cloud"
         items:
           - "Docker"
-          - "Google Cloud Platform (GCP)"
           - "AWS"
+          - "Google Cloud Platform (GCP)"
           - "CI/CD"
     
     highlights:
@@ -58,17 +58,16 @@ pt:
         period: "Abril 2025 - Presente"
         location: "EUA - Remoto"
         status: "Atual"
-        description: "Desenvolvimento e manutenção de soluções escaláveis para uma plataforma de licenciamento musical.
-          Atuação no backend com Ruby on Rails, criação e integração de APIs GraphQL e desenvolvimento de interfaces com React e Hotwire.
-          Uso de AWS, além de trabalho com arquitetura, manutenção de legado e evolução de módulos do produto."
+        description: "Desenvolvimento e manutenção das plataformas Marmoset Music e Track Club, voltadas para licenciamento musical. Trabalho full stack com Rails, React, Node.js e GraphQL no desenvolvimento de funcionalidades, APIs e serviços. Integrações com Spotify, Cyanite e meios de pagamento. Jobs assíncronos com Sidekiq e Redis, busca com Algolia, e participação em decisões de arquitetura e CI/CD."
         technologies:
           - "Ruby on Rails"
           - "React.js"
-          - "Hotwire"
+          - "Node.js"
           - "GraphQL"
-          - "AWS"
           - "PostgreSQL"
-          - "Docker"
+          - "Redis"
+          - "Algolia"
+          - "AWS"
       
       - role: "Desenvolvedora Full Stack"
         company: "Cálculo Jurídico"
@@ -110,6 +109,30 @@ pt:
           - "Jest"
           - "MongoDB"
           - "Docker"
+  projects:
+    title: "Projetos"
+    items:
+      - name: "ContaxisPro"
+        description: "SaaS de gestão financeira construído com Rails 8, Hotwire e PostgreSQL. Implementei multi-tenancy, integração com Stripe (checkout, webhooks e portal de autoatendimento), jobs com Solid Queue, autenticação via Devise e deploy automatizado no Railway."
+        technologies:
+          - "Ruby on Rails"
+          - "PostgreSQL"
+          - "Hotwire"
+          - "Stripe"
+          - "Solid Queue"
+          - "Docker"
+        github: ""
+        url: "https://contaxispro.com.br"
+      - name: "SnippetBox"
+        description: "Ferramenta de compartilhamento de snippets construída com Rails 8 e Hotwire. Upload de arquivos via Active Storage, Markdown com syntax highlighting via Rouge, slugs customizados e expiração automática com Solid Queue. Autoria por cookie, sem necessidade de conta."
+        technologies:
+          - "Ruby on Rails"
+          - "PostgreSQL"
+          - "Hotwire"
+          - "Active Storage"
+          - "Docker"
+        github: "https://github.com/marquesaline/snippet-box"
+        url: "https://snippet-box.com"
   latest_posts:
     title: "Últimos Posts"
     cta: "Ver todos os posts"
@@ -150,8 +173,8 @@ en:
     name: "Aline Marques"
     title: "Full Stack Developer"
     description: "Full Stack Developer specialized in scalable web applications.
-      I mainly work with Ruby on Rails, React and Hotwire, building and maintaining real-world products.
-      Experienced with production systems, architecture decisions and cloud environments."
+      I work with Ruby on Rails, React, Node.js and GraphQL, from backend to user experience.
+      Experienced with real-world products, integrations, performance and production system maintenance."
     cta_contact: "Get in touch"
     cta_resume: "View resume"
     image_alt: "Photo of Aline Marques"
@@ -165,29 +188,29 @@ en:
       text: "I started my career as a developer in 2022, working as a Full Stack developer using Node.js and Angular.
         After that, I worked with Django and Angular, which expanded my backend and architecture experience.
         Over time, I began working with Ruby on Rails and have since focused on this technology, contributing to larger, production-ready projects.<br><br>
-        I enjoy working on solutions that address real problems, including maintaining existing systems, handling legacy code and continuously improving products."
+        Today I work with a broader stack including React, Node.js and GraphQL, with a focus on performance, external service integrations and evolving production platforms."
     
     skills_title: "Key Skills"
     skills:
       - category: "Frontend"
         items:
           - "React.js"
+          - "Next.js"
           - "Hotwire"
           - "TypeScript"
-          - "Tailwind CSS"
-      
+
       - category: "Backend"
         items:
           - "Ruby on Rails"
-          - "Django"
+          - "Node.js"
+          - "GraphQL"
           - "REST APIs"
-          - "Microservices"
-      
+
       - category: "DevOps & Cloud"
         items:
           - "Docker"
-          - "Google Cloud Platform (GCP)"
           - "AWS"
+          - "Google Cloud Platform (GCP)"
           - "CI/CD"
     
     highlights:
@@ -205,17 +228,16 @@ en:
         period: "April 2025 - Present"
         location: "USA - Remote"
         status: "Current"
-        description: "Development and maintenance of scalable solutions for a music licensing platform.
-          Backend work using Ruby on Rails, creation and integration of GraphQL APIs, and frontend development with React and Hotwire.
-          Use of AWS, as well as work on architecture, legacy maintenance and product evolution."
+        description: "Development and maintenance of the Marmoset Music and Track Club platforms focused on music licensing. Full stack work with Rails, React, Node.js and GraphQL — building features, APIs and services. Integrations with Spotify, Cyanite and payment providers. Async jobs with Sidekiq and Redis, search with Algolia, and involvement in architecture decisions and CI/CD."
         technologies:
           - "Ruby on Rails"
           - "React.js"
-          - "Hotwire"
+          - "Node.js"
           - "GraphQL"
-          - "AWS"
           - "PostgreSQL"
-          - "Docker"
+          - "Redis"
+          - "Algolia"
+          - "AWS"
       
       - role: "Full Stack Developer"
         company: "Cálculo Jurídico"
@@ -257,6 +279,30 @@ en:
           - "Jest"
           - "MongoDB"
           - "Docker"
+  projects:
+    title: "Projects"
+    items:
+      - name: "ContaxisPro"
+        description: "Financial management SaaS built with Rails 8, Hotwire and PostgreSQL. Implemented multi-tenancy, Stripe integration (checkout, webhooks and self-service portal), background jobs with Solid Queue, Devise authentication and automated deployment on Railway."
+        technologies:
+          - "Ruby on Rails"
+          - "PostgreSQL"
+          - "Hotwire"
+          - "Stripe"
+          - "Solid Queue"
+          - "Docker"
+        github: ""
+        url: "https://contaxispro.com.br"
+      - name: "SnippetBox"
+        description: "Snippet sharing tool built with Rails 8 and Hotwire. File uploads via Active Storage, Markdown rendering with syntax highlighting via Rouge, custom slugs and auto-expiration via Solid Queue. Cookie-based ownership, no account needed."
+        technologies:
+          - "Ruby on Rails"
+          - "PostgreSQL"
+          - "Hotwire"
+          - "Active Storage"
+          - "Docker"
+        github: "https://github.com/marquesaline/snippet-box"
+        url: "https://snippet-box.com"
   latest_posts:
     title: "Latest Posts"
     cta: "View all posts"

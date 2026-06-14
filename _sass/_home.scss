@@ -245,8 +245,117 @@
   }
 }
 
-.latest-posts {
+.projects {
   background: $bg-primary;
+
+  .section-container {
+    padding-bottom: 2rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #E5E7Eb;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &__icon {
+      color: $primary;
+      margin-bottom: 0.25rem;
+    }
+
+    &__name {
+      font-family: $font-title;
+      font-size: 1.25rem;
+      color: $text-dark;
+      margin-bottom: 0;
+    }
+
+    &__description {
+      font-size: 0.95rem;
+      color: $text-dark;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    &__tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.25rem 0 0;
+
+      li {
+        font-size: 0.8rem;
+        color: $text-dark;
+        border: 1px solid #D1D5DB;
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        font-weight: 500;
+      }
+    }
+
+    &__links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.85;
+        text-decoration: none;
+      }
+
+      &--primary {
+        background-color: $primary;
+        color: white;
+      }
+
+      &--secondary {
+        background-color: transparent;
+        color: $text-dark;
+        border: 1px solid #D1D5DB;
+
+        &:hover {
+          color: $text-dark;
+        }
+      }
+    }
+  }
+}
+
+.latest-posts {
 
   .latest-posts-grid {
     display: grid;
