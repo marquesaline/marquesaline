@@ -55,7 +55,11 @@ Beleza?! Agora vamos entender como isso funciona na prática.
 
 Bom, já te adianto que no Rails um service object nada mais é do que uma classe Ruby comum, mas que é criada com um objetivo de executar um determinado processo muito específico. 
 
-Não existe uma convenção oficial do Rails direta pra Services Objects, até porque a arquitetura MVC separa apenas em models, views e controller, mas você vai ver por aí que a comunidade consolidou algumas práticas. 
+Não existe uma convenção oficial do Rails direta pra Services Objects, até porque a arquitetura MVC separa apenas em models, views e controller. 
+
+Os services objects acabam sendo uma forma de expandir a camada de negócio quando ela começa a crescer além do que o model comporta. Se quiser entender melhor como essa organização por camadas funciona, dá uma olhada nesse post sobre [arquitetura em camadas](/arquitetura-em-camadas).
+
+Mas voltando, você vai ver por aí que a comunidade consolidou algumas práticas. 
 
 O local mais frequente pra colocar os services objects é na `app/services`. Mas fique atento que você pode ver outras convenções a depender da empresa que você estiver trabalhando. 
 
