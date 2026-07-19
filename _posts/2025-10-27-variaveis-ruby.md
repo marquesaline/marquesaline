@@ -93,4 +93,6 @@ Tranquilo, né?!
 
 E é isso, esse é o básico de variáveis em Ruby. 
 
+No próximo post vou falar sobre os [tipos de dados em Ruby](/tipos-de-dados-em-ruby).
+
 

@@ -179,7 +179,7 @@ Do lado positivo, é um estilo simples de entender e fácil de explicar pra time
 
 Do lado negativo, em sistemas simples pode gerar indireção desnecessária. Às vezes você cria uma camada de serviço que só repassa a chamada pro model, sem fazer nada de especial. Código a mais sem ganho real.
 
-Tem também o risco de exagerar nas abstrações. Pode virar hábito criar service objects, repositórios e interfaces pra tudo, mesmo quando não precisa. Abstrações têm custo. São mais arquivos, mais saltos pra entender o código, mais coisa pra manter.
+Tem também o risco de exagerar nas abstrações. Pode virar hábito criar [service objects](/services-objects-rails), repositórios e interfaces pra tudo, mesmo quando não precisa. Abstrações têm custo. São mais arquivos, mais saltos pra entender o código, mais coisa pra manter.
 
 E quando a aplicação cresce muito, aparecem dois problemas que andam juntos:
 

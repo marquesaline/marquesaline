@@ -153,6 +153,7 @@ Nesse momento, o model deixa de ser apenas um "espelho da tabela" e vira quase u
 
 Isso acontece porque, no Active Record, estado, persistência e regra vivem juntos.
 
+Uma forma comum de aliviar isso é extrair essa lógica de negócio pra fora do model, por exemplo usando [service objects](/services-objects-rails).
 
 ### Testabilidade
 
@@ -160,7 +161,7 @@ Outro ponto que costuma aparecer é a testabilidade.
 
 Como o model já está diretamente ligado ao banco, muitas vezes você precisa de banco até para testar regras que são puramente de negócio.
 
-Não é impossível testar (Rails facilita bastante isso), mas o acoplamento existe.
+Não é impossível testar (Rails facilita bastante isso), mas o [acoplamento](/o-que-e-acoplamento) existe.
 
 ### Quando o domínio não é igual ao banco
 

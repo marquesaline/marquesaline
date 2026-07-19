@@ -98,7 +98,7 @@ E já tenha em mente que ausência de valor é diferente de 0 e de string vazia.
 
 Bom, esses são os **tipos de dados mais básicos em Ruby**, com eles, já é possível representar praticamente qualquer informação simples no código. 
 
-Mas é claro, que tem mais coisas no Ruby além disso, e vamos ver nos próximos posts. 
+Mas é claro, que tem mais coisas no Ruby além disso, e vamos ver nos próximos posts, começando pelos [arrays](/ruby-arrays). 
 
 
 

@@ -23,7 +23,7 @@ A análise estática é uma técnica que envolve analisar o código sem executar
 
 A análise acontece diretamente no código-fonte e tenta identificar padrões, riscos e problemas que conseguem ser detectados antes mesmo da aplicação rodar.
 
-Dependendo da ferramenta, isso pode envolver análise de complexidade, dependências entre módulos, vulnerabilidades de segurança, convenções do projeto, acoplamento indevido e outras questões relacionadas à estrutura do sistema.
+Dependendo da ferramenta, isso pode envolver análise de complexidade, dependências entre módulos, vulnerabilidades de segurança, convenções do projeto, [acoplamento](/o-que-e-acoplamento) indevido e outras questões relacionadas à estrutura do sistema.
 
 Na prática, análise estática pode ser utilizada pra detectar coisas como código morto, variáveis não utilizadas, alta complexidade, vulnerabilidades, dependências proibidas entre partes da aplicação, quebras de convenção e vários outros tipos de problema.
 
@@ -119,7 +119,7 @@ def process_order(order)
 end
 ```
 
-Mesmo sem executar esse código, uma ferramenta como o RuboCop poderia apontar que esse método tem muita complexidade, muitos caminhos possíveis e responsabilidades demais concentradas no mesmo lugar.
+Mesmo sem executar esse código, uma ferramenta como o RuboCop poderia apontar que esse método tem muita complexidade, muitos caminhos possíveis e responsabilidades demais concentradas no mesmo lugar, um sinal de que esse método está violando o [princípio da responsabilidade única](/single-responsibility).
 
 O problema aqui não é apenas "o código está feio". Métodos assim tendem a ser mais difíceis de testar, mais difíceis de modificar e mais fáceis de quebrar quando uma nova regra de negócio aparece.
 

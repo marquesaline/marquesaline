@@ -203,6 +203,8 @@ end
 
 Agora `InvoiceService` só conhece `Order`. Se `Address` mudar internamente, só `Order` precisa ser atualizado. O acoplamento fica contido no lugar certo.
 
+Isolar esse tipo de lógica em um objeto dedicado, como um [service object](/services-objects-rails), é outra forma comum de conter esse acoplamento.
+
 Não é uma regra absoluta, mas é um bom sinal de que um componente está sabendo demais sobre a estrutura interna de outro.
 
 No fundo, a ideia é essa: cada objeto esconde a própria estrutura e expõe só o que precisa. Quem está de fora não precisa saber como as coisas estão organizadas por dentro, beleza?!
@@ -210,6 +212,8 @@ No fundo, a ideia é essa: cada objeto esconde a própria estrutura e expõe só
 Então, a gente entendeu um pouquinho sobre como funciona acoplamento. Esse é um daqueles conceitos que parece simples na definição, mas vai ficando mais interessante conforme você começa a enxergar ele em diferentes níveis.
 
 E tenha em mente que só citei alguns exemplos de acoplamento, porque a verdade é que pode acontecer de diversas formas no código. 
+
+Se quiser saber como ferramentas automatizadas ajudam a proteger a aplicação desse tipo de problema de forma contínua, escrevi um post sobre [análise estática](/analise-estatica).
 
 Bom, espero que tenha conseguido te ajudar a entender um pouco mais sobre esse tema.
 

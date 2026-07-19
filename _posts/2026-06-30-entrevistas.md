@@ -120,7 +120,7 @@ Nem sempre dá pra saber o formato com antecedência, então vale se preparar ta
 
 O que costuma ser avaliado não é só se você chega à solução certa, mas **como você interpreta o problema, reage quando algo dá errado e se comunica durante a resolução**.
 
-Numa das entrevistas que já fiz, o exercício era percorrer uma _string_, registrar a posição de cada letra num _hash_ e depois ordenar os resultados. 
+Numa das entrevistas que já fiz, o exercício era percorrer uma _string_, registrar a posição de cada letra num [_hash_](/ruby-hashes) e depois ordenar os resultados. 
 
 Cheguei a uma solução funcional, mas com uma abordagem menos elegante. Mesmo assim, consegui avançar.
 
@@ -145,7 +145,7 @@ Ah, e algumas empresas permitem consultar a documentação durante o exercício.
 Além do live coding, podem aparecer perguntas sobre conceitos e situações técnicas: 
 
 - Open-Closed Principle
-- separação de responsabilidades
+- [separação de responsabilidades](/single-responsibility)
 - background jobs
 - feature flags
 - testes

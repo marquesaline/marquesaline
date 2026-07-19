@@ -2,6 +2,7 @@
 layout: page
 title: Sobre
 permalink: /sobre/
+description: "Conheça a Aline Marques: desenvolvedora Ruby on Rails e o motivo desse espaço, que reúne estudos e anotações sobre programação."
 ---
 
 Oi, eu sou a Aline.

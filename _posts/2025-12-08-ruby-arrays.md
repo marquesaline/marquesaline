@@ -220,6 +220,8 @@ Lembre-se que o `length` e o `size` também indicam quando o array está vazio r
 
 Bom, falamos bastante sobre arrays. Tem vários métodos que podem te ajudar a manipular ou extrair informações. A gente ainda vai ver outros mais pra frente. 
 
+No próximo post eu mostro como percorrer e transformar esses dados usando os principais iteradores: [Each, Map e Select](/ruby-iterando-arrays).
+
 Sei que é muita coisa, mas fica tranquilo, com o tempo e a prática, a gente começa a memorizar alguns desses. Mas lembre-se, você não precisa saber tudo de cabeça, a documentação tá aí pra nos ajudar. 
 
 Até a próxima!

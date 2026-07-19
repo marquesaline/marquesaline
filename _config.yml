@@ -15,6 +15,11 @@ instagram_username: maarques_aline
 github_username: marquesaline
 linkedin_username: marques-aline
 image: /assets/images/logo.png
+
+# jekyll-seo-tag prefixes paginated titles with "Page X of Y for " by default;
+# jekyll-paginate-v2's own `pagination.title` format below already covers it in pt-BR.
+seo_paginator_message: ""
+
 defaults:
   - scope:
       path: ""

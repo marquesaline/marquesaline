@@ -45,7 +45,7 @@ Fora que isso dificulta a manutenção do código e os testes de cada parte.
 
 Nesse caso, o service object entraria como um objeto responsável por representar esse processo específico: finalizar um pedido.
 
-Ao invés de espalhar essa lógica entre controller e model, o service object centraliza esse fluxo em um único lugar, deixando cada parte da aplicação com uma responsabilidade clara.
+Ao invés de espalhar essa lógica entre controller e model, o service object centraliza esse fluxo em um único lugar, deixando cada parte da aplicação com uma [responsabilidade clara](/single-responsibility).
 
 O controller apenas orquestra a requisição. O model cuida das regras da entidade e o service object coordena a lógica de negócio envolvida no processo.
 
@@ -144,7 +144,7 @@ class OrdersController < ApplicationController
 end
 ```
 
-Então, o controller apenas chama o `CompleteOrder.new(@order).call`, assim, toda lógica de finalização do pedido não precisa ficar acoplado no controller, ele fica em uma parte separada, facilitando a manutenção do código. 
+Então, o controller apenas chama o `CompleteOrder.new(@order).call`, assim, toda lógica de finalização do pedido não precisa ficar [acoplada](/o-que-e-acoplamento) no controller, ele fica em uma parte separada, facilitando a manutenção do código. 
 
 ## Quando usar o Service Object
 

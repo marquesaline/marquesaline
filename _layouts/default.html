@@ -9,6 +9,9 @@
   <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | relative_url }}">
 
   {%- seo -%}
+  {%- if page.layout == 'category' or paginator.page > 1 -%}
+  <meta name="robots" content="noindex, follow">
+  {%- endif -%}
   <meta property="og:image" content="{{ '/assets/images/logo.png' | absolute_url }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="{{ '/assets/images/logo.png' | absolute_url }}" />
