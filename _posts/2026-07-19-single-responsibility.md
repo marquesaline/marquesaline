@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Single Responsibility: pensando além das classes"
-description: "Entenda o princípio da responsabilidade única (SRP), como ele funciona no nível de classes e como pensar sobre ele num contexto de aplicações maiores, com vários serviços rodando ao mesmo tempo."
+title: "Single Responsibility (SRP): pensando além das classes"
+description: "Entenda o princípio da responsabilidade única (SRP), como ele funciona nas classes e como pensar sobre ele em aplicações maiores, com vários serviços."
 permalink: "/single-responsibility"
 date: 2026-07-19
 categories: ["Arquitetura de Software", "Ruby on Rails"]
