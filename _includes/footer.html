@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container">
     <div class="copy">
-      <p>&copy; {{ 'now' | date: "%Y" }} Todos os direitos reservados.</p>
+      <p>&copy; {{ 'now' | date: "%Y" }} {% if site.active_lang == "en" %}All rights reserved.{% else %}Todos os direitos reservados.{% endif %}</p>
     </div>
     
     <div class="social-links">
