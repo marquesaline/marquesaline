@@ -7,7 +7,7 @@
         </h2>
         
         {%- if post.excerpt -%}
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
         {%- endif -%}
         
         <div class="post-meta">
@@ -27,6 +27,10 @@
       </article>
     {%- endfor -%}
   {%- else -%}
-    <p class="no-posts">Nenhum post publicado ainda.</p>
+    {%- if site.active_lang == "en" -%}
+      <p class="no-posts">English posts coming soon.</p>
+    {%- else -%}
+      <p class="no-posts">Nenhum post publicado ainda.</p>
+    {%- endif -%}
   {%- endif -%}
 </div>

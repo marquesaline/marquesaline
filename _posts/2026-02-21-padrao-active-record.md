@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Padrão Active Record: o que é e como funciona"
 description: "Entenda o que é o padrão arquitetural Active Record, como ele funciona e por que o Rails o adota como base do seu ORM."
 permalink: "/padrao-active-record"

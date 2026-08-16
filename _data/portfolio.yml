@@ -1,4 +1,7 @@
 pt:
+  nav:
+    blog: "Blog"
+    about: "Sobre"
   hero:
     name: "Aline Marques"
     title: "Desenvolvedora Full Stack"
@@ -52,6 +55,7 @@ pt:
   history:
     title: "Experiência Profissional"
     intro: "Minha jornada profissional através de empresas inovadoras e projetos desafiadores"
+    tech_label: "Principais Tecnologias"
     experiences:
       - role: "Desenvolvedora Full Stack"
         company: "Marmoset"
@@ -111,6 +115,8 @@ pt:
           - "Docker"
   projects:
     title: "Projetos"
+    code_label: "Código"
+    visit_label: "Acessar"
     items:
       - name: "ContaxisPro"
         description: "SaaS de gestão financeira construído com Rails 8, Hotwire e PostgreSQL. Implementei multi-tenancy, integração com Stripe (checkout, webhooks e portal de autoatendimento), jobs com Solid Queue, autenticação via Devise e deploy automatizado no Railway."
@@ -142,7 +148,7 @@ pt:
     
     info_title: "Informações de Contato"
     email_label: "Email"
-    email: "alinem_oliveira@yahoo.com"
+    email: "alinemarques.dev@gmail.com"
     whatsapp_label: "WhatsApp"
     whatsapp: "+55 (81) 98705-7304"
     location_label: "Localização"
@@ -169,6 +175,9 @@ pt:
 
 
 en:
+  nav:
+    blog: "Blog"
+    about: "About"
   hero:
     name: "Aline Marques"
     title: "Full Stack Developer"
@@ -222,6 +231,7 @@ en:
   history:
     title: "Employment History"
     intro: "My professional journey through innovative companies and challenging projects"
+    tech_label: "Main Technologies"
     experiences:
       - role: "Full Stack Developer"
         company: "Marmoset"
@@ -281,6 +291,8 @@ en:
           - "Docker"
   projects:
     title: "Projects"
+    code_label: "Code"
+    visit_label: "Visit"
     items:
       - name: "ContaxisPro"
         description: "Financial management SaaS built with Rails 8, Hotwire and PostgreSQL. Implemented multi-tenancy, Stripe integration (checkout, webhooks and self-service portal), background jobs with Solid Queue, Devise authentication and automated deployment on Railway."
@@ -312,7 +324,7 @@ en:
     
     info_title: "Contact Information"
     email_label: "Email"
-    email: "alinem_oliveira@yahoo.com"
+    email: "alinemarques.dev@gmail.com"
     whatsapp_label: "WhatsApp"
     whatsapp: "+55 (81) 98705-7304"
     location_label: "Location"

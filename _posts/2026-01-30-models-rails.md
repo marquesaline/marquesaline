@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Entendendo Models no Rails: CRUD Básico com ActiveRecord"
 description: "Entenda como funcionam os models no Rails e aprenda as operações CRUD básicas com ActiveRecord: create, find, update e destroy."
 permalink: "/models-crud-rails"

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Arrays em Ruby: o que são e como usar"
 description: "Aprenda o que são arrays em Ruby, como armazenar e manipular listas de dados e veja exemplos práticos de uso."
 permalink: "/ruby-arrays"

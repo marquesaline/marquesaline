@@ -15,6 +15,13 @@
           <lastmod>{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }}</lastmod>
         {% endif %}
       </url>
+      {% for lang in site.languages %}
+        {% if lang != site.default_lang and doc.permalink_lang[lang] %}
+          <url>
+            <loc>{{ site.url }}/{{ lang }}{{ doc.permalink_lang[lang] }}</loc>
+          </url>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   {% endfor %}
 
@@ -27,6 +34,13 @@
         <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       {% endif %}
     </url>
+    {% for lang in site.languages %}
+      {% if lang != site.default_lang and page.permalink_lang[lang] %}
+        <url>
+          <loc>{{ site.url }}/{{ lang }}{{ page.permalink_lang[lang] }}</loc>
+        </url>
+      {% endif %}
+    {% endfor %}
     {% endunless %}
   {% endfor %}
 

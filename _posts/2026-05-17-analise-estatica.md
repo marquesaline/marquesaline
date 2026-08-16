@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Análise Estática: além do lint"
 description: "Análise estática é frequentemente associada a padronização de código, mas vai muito além disso. Neste post exploro como ferramentas como RuboCop, Brakeman e Packwerk protegem características arquiteturais diferentes de uma aplicação Rails."
 permalink: "/analise-estatica"

@@ -1,3 +1,27 @@
+{% assign nav = site.data.portfolio[site.active_lang].nav %}
+{% assign other_lang = "en" %}
+{% if site.active_lang == "en" %}{% assign other_lang = "pt" %}{% endif %}
+
+{% if site.active_lang == "en" %}
+  {% assign blog_href = "/en/blog/" %}
+  {% assign about_href = "/en/about/" %}
+{% else %}
+  {% assign blog_href = "/blog/" %}
+  {% assign about_href = "/sobre/" %}
+{% endif %}
+
+{% if page.permalink_lang[other_lang] %}
+  {% if other_lang == site.default_lang %}
+    {% assign lang_toggle_href = page.permalink_lang[other_lang] %}
+  {% else %}
+    {% assign lang_toggle_href = page.permalink_lang[other_lang] | prepend: "/en" %}
+  {% endif %}
+{% elsif other_lang == site.default_lang %}
+  {% assign lang_toggle_href = "/" %}
+{% else %}
+  {% assign lang_toggle_href = "/en/" %}
+{% endif %}
+
 <header class="header">
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
@@ -8,19 +32,17 @@
       <div class="nav-links">
         {% if page.layout != 'blog' %}
           <div class="nav-link">
-            <a href="{{ '/blog' | relative_url }}">Blog</a>
+            <a href="{{ blog_href | relative_url }}">{{ nav.blog }}</a>
           </div>
         {% endif %}
         {% if page.layout != 'home' %}
           <div class="nav-link">
-            <a href="{{ '/sobre' | relative_url }}">Sobre</a>
+            <a href="{{ about_href | relative_url }}">{{ nav.about }}</a>
           </div>
         {% endif %}
-        {% if page.layout == 'home' %}
-          <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle Language">
-            <span id="flag">🇺🇸</span>
-          </button>
-        {% endif %}
+        <button class="lang-toggle" onclick="localStorage.setItem('langChoice', '{{ other_lang }}'); window.location.href='{{ lang_toggle_href | relative_url }}'" aria-label="Toggle Language">
+          <span id="flag">{% if site.active_lang == "en" %}🇧🇷{% else %}🇺🇸{% endif %}</span>
+        </button>
       </div>
     </nav>
   </div>

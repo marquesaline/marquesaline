@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: pt
+page_id: post-processo-seletivo-dev
 title: "Entrevistas na área de tecnologia: etapas e dicas com base na minha experiência"
 description: "O que aprendi participando de processos seletivos para vagas de dev pleno com Ruby on Rails, React e JavaScript, em empresas brasileiras e estrangeiras."
 permalink: "/processo-seletivo-dev"

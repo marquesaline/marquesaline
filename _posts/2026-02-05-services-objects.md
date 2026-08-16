@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: pt
+page_id: post-services-objects-rails
 title: "Services Objects: o que são e quando usar"
 description: "Entenda o que são Service Objects no Rails, quando usar e como organizar lógica de negócio em aplicações maiores."
 permalink: "/services-objects-rails"

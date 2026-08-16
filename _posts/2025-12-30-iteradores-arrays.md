@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Each, Map e Select: Iteradores de Arrays em Ruby"
 description: "Entenda como usar each, map, select e outros iteradores essenciais para percorrer e transformar arrays em Ruby de forma prática."
 permalink: "/ruby-iterando-arrays"

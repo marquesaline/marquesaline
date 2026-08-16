@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!noResultsMsg) {
         noResultsMsg = document.createElement('p');
         noResultsMsg.className = 'no-results-message';
-        noResultsMsg.textContent = 'Nenhum post encontrado para "' + e.target.value + '"';
+        const noResultsText = window.searchNoResultsText || 'Nenhum post encontrado para'
+        noResultsMsg.textContent = noResultsText + ' "' + e.target.value + '"';
         document.querySelector('.posts-list').appendChild(noResultsMsg);
       }
     } else {

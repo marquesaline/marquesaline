@@ -1,6 +1,6 @@
 <div class="categories">
   <a href="{{ '/blog' | relative_url }}" class="category {% if page.layout != 'category' %}active{% endif %}">
-    Todos
+    {% if site.active_lang == "en" %}All{% else %}Todos{% endif %}
   </a>
   
   {%- assign all_categories = site.categories | sort -%}

@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: pt
+page_id: post-gerenciamento-de-dependencias
 title: "Gerenciamento de Dependências: o que uma parte do sistema precisa saber sobre a outra"
 description: "Entenda o que são dependências entre componentes, por que elas não são um problema por si só, e como técnicas como injeção de dependência, isolamento e abstração ajudam a controlar o conhecimento entre classes e domínios."
 permalink: "/gerenciamento-de-dependencias"

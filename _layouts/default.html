@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'pt-BR' }}">
+<html lang="{% if site.active_lang == 'en' %}en{% else %}pt-BR{% endif %}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,19 @@
   {%- seo -%}
   {%- if page.layout == 'category' or paginator.page > 1 -%}
   <meta name="robots" content="noindex, follow">
+  {%- endif -%}
+
+  {%- if page.page_id -%}
+    {%- for lang in site.languages -%}
+      {%- if page.permalink_lang[lang] -%}
+        {%- if lang == site.default_lang -%}
+          {%- assign hreflang_url = page.permalink_lang[lang] -%}
+        {%- else -%}
+          {%- assign hreflang_url = page.permalink_lang[lang] | prepend: "/en" -%}
+        {%- endif -%}
+        <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ hreflang_url }}" />
+      {%- endif -%}
+    {%- endfor -%}
   {%- endif -%}
   <meta property="og:image" content="{{ '/assets/images/logo.png' | absolute_url }}" />
   <meta name="twitter:card" content="summary_large_image" />

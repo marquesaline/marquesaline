@@ -2,16 +2,18 @@
 layout: default
 ---
 
+{% assign t = site.data.portfolio[site.active_lang] %}
+
 <section class="hero">
   <div class="section-container">
-    <img src="/assets/images/aline-perfil.jpeg" alt="" class="hero-image" data-i18n-attr="alt:hero.image_alt" loading="lazy">
-    <h1 data-i18n="hero.name"></h1>
-    <h2 data-i18n="hero.title"></h2>
-    <p class="hero-description" data-i18n="hero.description"></p>
+    <img src="/assets/images/aline-perfil.jpeg" alt="{{ t.hero.image_alt }}" class="hero-image" loading="lazy">
+    <h1>{{ t.hero.name }}</h1>
+    <h2>{{ t.hero.title }}</h2>
+    <p class="hero-description">{{ t.hero.description }}</p>
 
     <div class="hero-links">
-      <a href="#contact" class="btn-primary" data-i18n="hero.cta_contact"></a>
-      <a href="#" class="btn-light" target="_blank" data-i18n="hero.cta_resume" data-cv-link></a>
+      <a href="#contact" class="btn-primary">{{ t.hero.cta_contact }}</a>
+      <a href="{{ t.hero.cv_link }}" class="btn-light" target="_blank">{{ t.hero.cta_resume }}</a>
     </div>
   </div>
 </section>
@@ -19,19 +21,27 @@ layout: default
 <section class="about">
   <div class="section-container">
     <div class="title">
-      <h2 class="section-title" data-i18n="about.title"></h2>
-      <p class="section-description" data-i18n="about.intro"></p>
+      <h2 class="section-title">{{ t.about.title }}</h2>
+      <p class="section-description">{{ t.about.intro }}</p>
     </div>
     <div class="content">
       <div class="journey-container">
-        <h3 data-i18n="about.journey.title"></h3>
-        <p data-i18n-html="about.journey.text"></p>
+        <h3>{{ t.about.journey.title }}</h3>
+        <p>{{ t.about.journey.text }}</p>
       </div>
       <div class="skills-container">
-        <h3 data-i18n="about.skills_title"></h3>
-        <div id="skills-container" class="skills-grid"></div>
+        <h3>{{ t.about.skills_title }}</h3>
+        <div id="skills-container" class="skills-grid">
+          {% for skill in t.about.skills %}
+            <div class="skill-category">
+              <p class="skill-title">{{ skill.category }}</p>
+              <ul class="skill-items">
+                {% for item in skill.items %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
       </div>
-      <!-- <div id="highlights-container"></div> -->
     </div>
   </div>
 </section>
@@ -39,27 +49,90 @@ layout: default
 <section class="history">
   <div class="section-container">
     <div class="title">
-      <h2 class="section-title" data-i18n="history.title"></h2>
-      <p class="section-description" data-i18n="history.intro"></p>
+      <h2 class="section-title">{{ t.history.title }}</h2>
+      <p class="section-description">{{ t.history.intro }}</p>
     </div>
-    
-    <div id="timeline-container" class="timeline"></div>
+
+    <div id="timeline-container" class="timeline">
+      {% for exp in t.history.experiences %}
+        <div class="timeline-item">
+          <div class="main-info">
+            <div class="company">
+              <h3>{{ exp.role }}</h3>
+              <p>{{ exp.company }} {% if exp.status != "" %}<span class="badge-current">{{ exp.status }}</span>{% endif %}</p>
+            </div>
+            <div class="timeline-date">
+              <p>{{ exp.period }}</p>
+              <p>{{ exp.location }}</p>
+            </div>
+          </div>
+          <div class="description">
+            <p>{{ exp.description }}</p>
+          </div>
+          <div class="technologies">
+            <h4>{{ t.history.tech_label }}</h4>
+            <ul class="skill-items">
+              {% for tech in exp.technologies %}<li>{{ tech }}</li>{% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 <section class="projects">
   <div class="section-container">
     <div class="title">
-      <h2 class="section-title" data-i18n="projects.title"></h2>
+      <h2 class="section-title">{{ t.projects.title }}</h2>
     </div>
-    <div id="projects-container" class="projects-grid"></div>
+    <div id="projects-container" class="projects-grid">
+      {% for project in t.projects.items %}
+        <div class="project-card">
+          <div class="project-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <p class="project-card__description">{{ project.description }}</p>
+          <ul class="project-card__tags">
+            {% for tech in project.technologies %}<li>{{ tech }}</li>{% endfor %}
+          </ul>
+          {% if project.github != "" or project.url != "" %}
+            <div class="project-card__links">
+              {% if project.github != "" %}
+                <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  {{ t.projects.code_label }}
+                </a>
+              {% endif %}
+              {% if project.url != "" %}
+                <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer" class="project-card__link project-card__link--secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  {{ t.projects.visit_label }}
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
+{% if site.posts.size > 0 %}
 <section class="latest-posts">
   <div class="section-container">
     <div class="title">
-      <h2 class="section-title" data-i18n="latest_posts.title">Últimos Posts</h2>
+      <h2 class="section-title">{{ t.latest_posts.title }}</h2>
     </div>
     <div class="latest-posts-grid">
       {% for post in site.posts limit:3 %}
@@ -74,47 +147,48 @@ layout: default
         </a>
       {% endfor %}
     </div>
-    <a href="/blog/" class="btn-light" data-i18n="latest_posts.cta">Ver todos os posts</a>
+    <a href="{% if site.active_lang == site.default_lang %}/blog/{% else %}/en/blog/{% endif %}" class="btn-light">{{ t.latest_posts.cta }}</a>
   </div>
 </section>
+{% endif %}
 
 <section class="contact" id="contact">
   <div class="section-container">
     <div class="title">
-      <h2 class="section-title" data-i18n="contact.title"></h2>
-      <p class="section-description" data-i18n="contact.subtitle"></p>
+      <h2 class="section-title">{{ t.contact.title }}</h2>
+      <p class="section-description">{{ t.contact.subtitle }}</p>
     </div>
-    
+
     <div class="contact-content">
       <div class="contact-info">
-        <h3 data-i18n="contact.info_title"></h3>
-        
+        <h3>{{ t.contact.info_title }}</h3>
+
        <div class="info-item">
           <div class="info-icon">{% include icons/email.html %}</div>
           <div>
-            <p class="info-label" data-i18n="contact.email_label"></p>
-            <a href="mailto:alinem_oliveira@yahoo.com" data-i18n="contact.email"></a>
+            <p class="info-label">{{ t.contact.email_label }}</p>
+            <a href="mailto:{{ t.contact.email }}">{{ t.contact.email }}</a>
           </div>
         </div>
-        
+
         <div class="info-item">
           <div class="info-icon">{% include icons/phone.html %}</div>
           <div>
-            <p class="info-label" data-i18n="contact.whatsapp_label"></p>
-            <a href="https://wa.me/5581987057304" target="_blank" data-i18n="contact.whatsapp"></a>
+            <p class="info-label">{{ t.contact.whatsapp_label }}</p>
+            <a href="https://wa.me/5581987057304" target="_blank">{{ t.contact.whatsapp }}</a>
           </div>
         </div>
-        
+
         <div class="info-item">
           <div class="info-icon">{% include icons/location.html %}</div>
           <div>
-            <p class="info-label" data-i18n="contact.location_label"></p>
-            <p data-i18n="contact.location"></p>
+            <p class="info-label">{{ t.contact.location_label }}</p>
+            <p>{{ t.contact.location }}</p>
           </div>
         </div>
-        
+
         <div class="socials">
-          <h4 data-i18n="contact.socials_title"></h4>
+          <h4>{{ t.contact.socials_title }}</h4>
           <div class="social-links">
             <a href="{{ site.social.links[1] }}" target="_blank" aria-label="GitHub">
               {% include icons/github.html %}
@@ -128,36 +202,35 @@ layout: default
           </div>
         </div>
       </div>
-      
+
       <div class="contact-form">
-        <h3 data-i18n="contact.form_title"></h3>
+        <h3>{{ t.contact.form_title }}</h3>
         <div id="form-feedback" class="form-feedback" style="display: none;"></div>
 
         <form action="https://formspree.io/f/xwvvanoy" method="POST">
           <div class="form-row">
             <div class="form-group">
-              <label data-i18n="contact.form_name_label"></label>
-              <input type="text" name="name" data-i18n-attr="placeholder:contact.form_name_placeholder" required>
+              <label>{{ t.contact.form_name_label }}</label>
+              <input type="text" name="name" placeholder="{{ t.contact.form_name_placeholder }}" required>
             </div>
-            
+
             <div class="form-group">
-              <label data-i18n="contact.form_email_label"></label>
-              <input type="email" name="email" data-i18n-attr="placeholder:contact.form_email_placeholder" required>
+              <label>{{ t.contact.form_email_label }}</label>
+              <input type="email" name="email" placeholder="{{ t.contact.form_email_placeholder }}" required>
             </div>
           </div>
-          
+
           <div class="form-group">
-            <label data-i18n="contact.form_subject_label"></label>
-            <input type="text" name="subject" data-i18n-attr="placeholder:contact.form_subject_placeholder" required>
+            <label>{{ t.contact.form_subject_label }}</label>
+            <input type="text" name="subject" placeholder="{{ t.contact.form_subject_placeholder }}" required>
           </div>
-          
+
           <div class="form-group">
-            <label data-i18n="contact.form_message_label"></label>
-            <textarea name="message" rows="6" data-i18n-attr="placeholder:contact.form_message_placeholder" required></textarea>
+            <label>{{ t.contact.form_message_label }}</label>
+            <textarea name="message" rows="6" placeholder="{{ t.contact.form_message_placeholder }}" required></textarea>
           </div>
-          
-          <button type="submit" class="btn-primary" data-i18n="contact.form_submit">
-          </button>
+
+          <button type="submit" class="btn-primary">{{ t.contact.form_submit }}</button>
         </form>
       </div>
     </div>
@@ -165,6 +238,12 @@ layout: default
 </section>
 
 <script>
-  window.i18nData = {{ site.data.portfolio | jsonify }};
+  window.formI18n = {{ t.contact | jsonify }};
 </script>
 <script src="/assets/js/portfolio.js"></script>
+{% if page.page_id == "home" %}
+<script>
+  window.langSiblingUrl = "{% if site.active_lang == 'en' %}/{% else %}/en/{% endif %}";
+</script>
+<script src="/assets/js/lang-redirect.js"></script>
+{% endif %}

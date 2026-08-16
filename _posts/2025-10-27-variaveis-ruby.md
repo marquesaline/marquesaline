@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title:  "Variáveis e Constantes em Ruby: entenda a diferença e como usar"
 description: "Descubra o que são variáveis e constantes em Ruby e entenda de forma simples quando usar cada uma"
 permalink: "/variaveis-e-constantes-em-ruby"

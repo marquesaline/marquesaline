@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: pt
+page_id: post-arquitetura-em-camadas
 title: "Arquitetura em Camadas"
 description: "Entenda o que é arquitetura em camadas, como o isolamento entre elas funciona, a diferença entre camadas fechadas e abertas, e os trade-offs desse estilo arquitetural."
 permalink: "/arquitetura-em-camadas"

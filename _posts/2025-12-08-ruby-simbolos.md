@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title:  "Símbolos em Ruby (Symbols)"
 description: "Entenda o que são símbolos (symbols) em Ruby, como funcionam e quando usá-los no lugar de strings."
 permalink: "/simbolos-ruby"

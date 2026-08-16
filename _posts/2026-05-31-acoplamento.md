@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: pt
+page_id: post-o-que-e-acoplamento
 title: "Acoplamento: o que é, tipos e como desacoplar"
 description: "Acoplamento é um dos conceitos mais importantes em arquitetura de software. Vamos explorar o que é acoplamento, por que ele importa e como pensar sobre ele além da dependência entre classes."
 permalink: "/o-que-e-acoplamento"

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title:  "Entendendo a pasta `config/` em projetos Rails"
 description: "Como funciona o diretório config/ no Rails: rotas, ambientes, banco de dados e arquivos essenciais de configuração."
 permalink: "/rails-config"

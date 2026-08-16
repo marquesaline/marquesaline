@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Hashes em Ruby: o que são e como usar"
 description: "Aprenda o que são hashes em Ruby, como usar pares de chave e valor para organizar dados e manipulá-los na prática."
 permalink: "/ruby-hashes"

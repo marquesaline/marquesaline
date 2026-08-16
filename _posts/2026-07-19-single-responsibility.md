@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: pt
+page_id: post-single-responsibility
 title: "Single Responsibility (SRP): pensando além das classes"
 description: "Entenda o princípio da responsabilidade única (SRP), como ele funciona nas classes e como pensar sobre ele em aplicações maiores, com vários serviços."
 permalink: "/single-responsibility"

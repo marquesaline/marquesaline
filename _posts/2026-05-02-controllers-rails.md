@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title: "Controllers no Rails: como funcionam e qual o papel no MVC"
 description: "Entenda o papel do controller no Rails, como ele recebe requisições HTTP e decide qual resposta retornar dentro do padrão MVC."
 permalink: "/controllers-rails"

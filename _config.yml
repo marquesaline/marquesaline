@@ -26,6 +26,8 @@ defaults:
       type: posts
     values:
       image: /assets/images/logo.png
+      lang: pt
+      lang-exclusive: ["pt"]
 
 # Build settings
 markdown: kramdown
@@ -38,6 +40,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate-v2
   - jekyll-archives
+  - jekyll-polyglot
+
+languages: ["pt", "en"]
+default_lang: "pt"
+exclude_from_localization: ["assets", "images", "css", "javascript", "sitemap.xml", "robots.txt", "404.html"]
+parallel_localization: false
 
 pagination:
   enabled: true

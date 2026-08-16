@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: pt
 title:  "Entendendo os arquivos principais e a pasta app/ no Rails"
 description: "Uma explicação simples e prática dos principais arquivos e do diretório app/ em um projeto Rails."
 permalink: "/rails-arquivos-e-app"
