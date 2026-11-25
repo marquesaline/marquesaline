@@ -324,6 +324,34 @@ redirect_to "https://google.com"
 
 Em todos esses casos, o `redirect_to` sempre indica para qual rota o navegador deve ir na próxima requisição, beleza?!
 
+### Respostas condicionais com `fresh_when`
+
+Existe ainda uma terceira situação, menos comum, que é quando o navegador já tem uma cópia da página e só quer saber se ela mudou.
+
+Imagina alguém que abre o mesmo post várias vezes ao longo do dia. Se o post não foi alterado, não faz muito sentido o servidor montar e enviar o HTML inteiro de novo toda vez.
+
+Pra isso, o Rails tem o `fresh_when`:
+
+```ruby
+def show
+  @post = Post.find(params[:id])
+  fresh_when @post
+end
+```
+
+O `fresh_when` adiciona à resposta dois cabeçalhos HTTP calculados a partir do post. O `ETag` funciona como um identificador da versão daquele conteúdo, e o `Last-Modified` traz a data da última alteração (o `updated_at`).
+
+O navegador guarda esses valores junto com a página. Na próxima visita, ele envia os dois de volta, nos cabeçalhos `If-None-Match` e `If-Modified-Since`, como se perguntasse "eu tenho esta versão aqui, ela ainda vale?".
+
+A partir daí, a action pode terminar de dois jeitos:
+
+- se o post não mudou, o Rails responde com o status `304 Not Modified`, sem corpo, e o navegador mostra a cópia que já tem;
+- se o post mudou, o Rails segue com a renderização padrão da view, como em qualquer action.
+
+Repare que, de novo, não chamamos `render`. É a mesma convenção que vimos no `index`, só que agora o Rails também confere se precisa renderizar.
+
+Um detalhe é que o `Post.find` continua rodando, porque o Rails precisa do post pra saber se ele mudou. O que se economiza é montar a view e enviar o HTML.
+
 Mas tem um detalhe: em alguns casos, precisamos executar uma lógica antes de chegar na action principal.
 
 É aí que entra o `before_action`.
